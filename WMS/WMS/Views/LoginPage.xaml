@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WMS.LoginPage" xmlns:local="clr-namespace:WMS;assembly:WMS" >
+	<ContentPage.Content>
+        <StackLayout BackgroundColor="{x:Static local:Colors.PrimaryColor}">
+
+            <Label FontSize="50" TextColor="White" Margin= "0,50,0,50" Text="WMS" HorizontalOptions="Center" />
+
+            <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="15,0,15,0">
+                <Label Text="Sign in" TextColor="Black" HorizontalOptions="Center" Margin="0,10,0,10" />
+                <Frame CornerRadius="5" HorizontalOptions="FillAndExpand" Margin="5" Padding="0" HasShadow="false" OutlineColor="Gray" >
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="user_pic" WidthRequest="30" HeightRequest="30" Margin="5,0,0,0"/>
+                        <BoxView WidthRequest="1" BackgroundColor="Gray"  />
+                        <local:TransparentEntry HorizontalOptions="FillAndExpand" Placeholder="User ID" />
+                    </StackLayout>
+                    
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

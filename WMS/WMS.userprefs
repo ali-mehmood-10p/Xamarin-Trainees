@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{60CB1541-C564-48EC-8C6D-13302911BD89}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WMS/Views/LoginPage.xaml">
+    <Files>
+      <File FileName="WMS/App.xaml.cs" Line="11" Column="37" />
+      <File FileName="WMS/Views/LoginPage.xaml" Line="20" Column="23" />
+      <File FileName="WMS/Views/LoginPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="WMS/Utils/Colors.cs" Line="1" Column="1" />
+      <File FileName="WMS/ViewModels/LoginViewModel.cs" Line="14" Column="9" />
+      <File FileName="WMS/ViewModels/BaseViewModel.cs" Line="18" Column="6" />
+      <File FileName="iOS/Renderer/TransparentEntryRenderer.cs" Line="19" Column="5" />
+      <File FileName="WMS/Controls/TransparentEntry.cs" Line="6" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WMS.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8AC733B5-CD5F-47E8-A8D0-EFA73162E0C8" />
+  <MultiItemStartupConfigurations />
+</Properties>

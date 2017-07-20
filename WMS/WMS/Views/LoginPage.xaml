@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="WMS.LoginPage" xmlns:local="clr-namespace:WMS;assembly:WMS" >
+
 	<ContentPage.Content>
         <StackLayout BackgroundColor="{x:Static local:Colors.PrimaryColor}">
             <Label FontSize="50" TextColor="White" Margin= "0,50,0,50" Text="WMS" HorizontalOptions="Center" />
@@ -20,13 +21,15 @@
                         <local:TransparentEntry HorizontalOptions="FillAndExpand" Placeholder="Password" IsPassword="true" />
                     </StackLayout>                    
                 </local:CustomFrame>
-                <Button Margin="5" HorizontalOptions="FillAndExpand" Text="Login" BackgroundColor="{x:Static local:Colors.PrimaryColor}" TextColor="White" FontSize="16" />
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="5" >
+                <Button  HorizontalOptions="FillAndExpand" Text="Login" BackgroundColor="{x:Static local:Colors.PrimaryColor}" TextColor="White" FontSize="16" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"  >
                     <Switch VerticalOptions="Center" />
                     <Label Text="Remember me" VerticalOptions="Center" TextColor="{x:Static local:Colors.PrimaryColor}" FontAttributes="Bold" HorizontalOptions="FillAndExpand" />
-                    <Button Text="Forgot Password?" HorizontalOptions="End" TextColor="{x:Static local:Colors.PrimaryColor}" FontSize="12" BackgroundColor="Transparent" />
+                    <local:TransparentButton Text="Forgot Password?" HorizontalOptions="End" TextColor="{x:Static local:Colors.PrimaryColor}" FontSize="12" BackgroundColor="Transparent" />
                 </StackLayout>
-
+                <Label Text="Not a Customer?" TextColor="{x:Static local:Colors.PrimaryColor}" FontSize="12" />
+                <Button  HorizontalOptions="FillAndExpand" Text="Make an Appointment" BackgroundColor="Gray" TextColor="White" FontSize="16" />
+                
             </StackLayout>
         </StackLayout>
 	</ContentPage.Content>

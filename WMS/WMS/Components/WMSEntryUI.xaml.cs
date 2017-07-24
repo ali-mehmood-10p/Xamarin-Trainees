@@ -48,6 +48,8 @@ namespace WMS.Components
             }
 
             InitializeComponent();
+            RelativeLayout layout = (RelativeLayout)Content;
+            var k = layout.Children[1];
         }
     }
 }

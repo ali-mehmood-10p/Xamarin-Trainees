@@ -42,6 +42,11 @@ namespace WMS.Components
 
         public WMSEntryUI()
         {
+            if(Device.Idiom == TargetIdiom.Tablet)
+            {
+                //FieldIcon.
+            }
+
             InitializeComponent();
         }
     }

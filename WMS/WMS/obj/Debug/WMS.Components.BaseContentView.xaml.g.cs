@@ -11,7 +11,7 @@
 namespace WMS.Components {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/shahan/Documents/Projects/Xamarin/Projects/TrainingTask01/WMS/WMS/Components/BaseContentView.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/Components/BaseContentView.xaml")]
     public partial class BaseContentView : global::Xamarin.Forms.ContentView {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

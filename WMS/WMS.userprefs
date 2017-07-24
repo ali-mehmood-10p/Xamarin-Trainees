@@ -1,7 +1,9 @@
 ﻿<Properties StartupConfiguration="{D173FB75-50F5-4FE4-ADC3-3324EB2073B0}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="WMS/App.xaml">
     <Files>
-      <File FileName="WMS/App.xaml" Line="35" Column="15" />
+      <File FileName="WMS/App.xaml" Line="14" Column="32" />
+      <File FileName="WMS/Components/WMSEntryUI.xaml.cs" Line="48" Column="14" />
+      <File FileName="WMS/Components/WMSEntryUI.xaml" Line="39" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -10,12 +12,13 @@
       <Breakpoint file="/Users/shahan/Xamarin-Trainees/Assignment01/WMS/iOS/CustomRenderer/WMSButtonRenderer.cs" relfile="iOS/CustomRenderer/WMSButtonRenderer.cs" line="40" column="1" />
       <Breakpoint file="/Users/shahan/Xamarin-Trainees/Assignment01/WMS/iOS/CustomRenderer/WMSButtonRenderer.cs" relfile="iOS/CustomRenderer/WMSButtonRenderer.cs" line="35" column="1" />
       <Breakpoint file="/Users/shahan/Xamarin-Trainees/Assignment01/WMS/iOS/CustomRenderer/WMSButtonRenderer.cs" relfile="iOS/CustomRenderer/WMSButtonRenderer.cs" line="48" column="4" />
+      <Breakpoint file="/Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/Components/WMSEntryUI.xaml.cs" relfile="WMS/Components/WMSEntryUI.xaml.cs" line="50" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.WMS.Droid PreferredExecutionTarget="Android.192.168.56.101:5555" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="WMS/ViewModels/ForgotPasswordPageViewModel.cs" line="53" offsetX="510" offsetY="1040" expression="CNIC" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.WMS.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2DD614E7-056A-4341-8F49-81231BE8C8F5" />
+  <MonoDevelop.Ide.ItemProperties.WMS.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.72CC862B-15C3-40E8-8A7A-622854C22D3D" />
   <MultiItemStartupConfigurations />
 </Properties>

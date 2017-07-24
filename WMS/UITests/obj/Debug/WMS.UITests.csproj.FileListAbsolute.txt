@@ -13,3 +13,17 @@
 /Users/shahan/Documents/Projects/Xamarin/Projects/TrainingTask01/WMS/UITests/obj/Debug/WMS.UITests.dll
 /Users/shahan/Documents/Projects/Xamarin/Projects/TrainingTask01/WMS/UITests/obj/Debug/WMS.UITests.pdb
 /Users/shahan/Documents/Projects/Xamarin/Projects/TrainingTask01/WMS/UITests/obj/Debug/WMS.UITests.csprojResolveAssemblyReference.cache
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/WMS.UITests.dll
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/WMS.UITests.pdb
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/nunit.framework.dll
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.Forms.Core.dll
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.Forms.Platform.dll
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.Forms.Xaml.dll
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.UITest.dll
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/nunit.framework.xml
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.UITest.xml
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.Forms.Core.xml
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.Forms.Xaml.xml
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/obj/Debug/WMS.UITests.csproj.CoreCompileInputs.cache
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/obj/Debug/WMS.UITests.dll
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/obj/Debug/WMS.UITests.pdb

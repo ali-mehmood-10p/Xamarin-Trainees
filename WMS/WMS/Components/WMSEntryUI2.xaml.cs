@@ -30,6 +30,17 @@ namespace WMS.Components
 			}
 		}
 
+		public static readonly BindableProperty DescriptionFontSizeProperty = BindableProperty.Create("DescriptionFontSize", typeof(double), typeof(double), (double)0.0);
+		public double DescriptionFontSize
+		{
+			get { return (double)GetValue(DescriptionFontSizeProperty); }
+			set
+			{
+				SetValue(DescriptionFontSizeProperty, value);
+				txtEntry.FontSize = value;
+			}
+		}
+
 		public WMSEntryUI2()
         {
             InitializeComponent();

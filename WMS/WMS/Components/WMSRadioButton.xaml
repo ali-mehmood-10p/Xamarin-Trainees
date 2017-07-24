@@ -21,7 +21,8 @@
                     Source="radio_sprite_selected"
                     WidthRequest="25">
                 </WMSControls:WMSImage>
-                <WMSControls:WMSLabel Text="{Binding TitleText}"
+                <WMSControls:WMSLabel x:Name="lblDescription"
+                    Text="{Binding TitleText}"
                     VerticalTextAlignment="Center"
                     HorizontalOptions="FillAndExpand">
                 </WMSControls:WMSLabel>

@@ -26,10 +26,9 @@ namespace WMS.iOS.CustomRenderer
                 Control.BorderStyle = UIKit.UITextBorderStyle.None;
                 Control.AutocorrectionType = UIKit.UITextAutocorrectionType.No;
 
-				if (Device.Idiom == TargetIdiom.Tablet)
-				{
-					// do whatever you want to the UITextField here!
-					Control.Font = UIFont.FromName(Control.Font.Name, Control.Font.PointSize + 11.0f);
+                if (Device.Idiom == TargetIdiom.Tablet)
+                {
+                    
 				}
 			}
 		}

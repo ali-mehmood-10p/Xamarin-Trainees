@@ -23,7 +23,6 @@ namespace WMS.iOS.CustomRenderer
                 if (Device.Idiom == TargetIdiom.Tablet)
                 {
                     // do whatever you want to the UITextField here!
-                    Control.TextSize = Control.TextSize + 11.0f;
                 }
 			}
         }

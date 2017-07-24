@@ -15,7 +15,7 @@ namespace WMS.Pages {
     public partial class LoginPage : global::WMS.Pages.BaseContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::WMS.Components.WMSLogoUI LogoView;
+        private global::WMS.Components.WMSHeaderUI LogoView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.CustomControls.WMSLabel lblSignIn;
@@ -27,20 +27,36 @@ namespace WMS.Pages {
         private global::WMS.Components.WMSEntryUI txtPassword;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSButton btnLogin;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.StackLayout HorStack;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.Components.WMSCheckBox chkRememberMe;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSLabel btnForgotPassword;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSLabel btnNotACustomer;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSButton btnMakeAppointment;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginPage));
-            LogoView = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSLogoUI>(this, "LogoView");
+            LogoView = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSHeaderUI>(this, "LogoView");
             lblSignIn = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "lblSignIn");
             txtID = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSEntryUI>(this, "txtID");
             txtPassword = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSEntryUI>(this, "txtPassword");
+            btnLogin = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSButton>(this, "btnLogin");
             HorStack = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.StackLayout>(this, "HorStack");
             chkRememberMe = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSCheckBox>(this, "chkRememberMe");
+            btnForgotPassword = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "btnForgotPassword");
+            btnNotACustomer = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "btnNotACustomer");
+            btnMakeAppointment = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSButton>(this, "btnMakeAppointment");
         }
     }
 }

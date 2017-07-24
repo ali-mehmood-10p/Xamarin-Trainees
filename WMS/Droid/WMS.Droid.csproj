@@ -96,6 +96,7 @@
     <Compile Include="CustomRenderer\WMSEntryRenderer.cs" />
     <Compile Include="CustomRenderer\WMSButtonRenderer.cs" />
     <Compile Include="CustomRenderer\WMSLabelRenderer.cs" />
+    <Compile Include="CustomRenderer\WMSEditorRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

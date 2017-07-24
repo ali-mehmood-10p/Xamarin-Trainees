@@ -33,13 +33,25 @@ namespace WMS.Pages {
         private global::WMS.Components.WMSEntryUI2 txtCity;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSLabel lblSelectDateTime;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.Components.WMSRadioButton rdEmail;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.Components.WMSRadioButton rdCall;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSLabel lblHowWouldYouLike;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.CustomControls.WMSPicker pickerHearAboutUs;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSButton btnSubmit;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSButton btnCancel;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.Components.WMSDYKUI viewDidYouKnow;
@@ -53,9 +65,13 @@ namespace WMS.Pages {
             txtEmaillAddress = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSEntryUI2>(this, "txtEmaillAddress");
             txtCountry = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSEntryUI2>(this, "txtCountry");
             txtCity = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSEntryUI2>(this, "txtCity");
+            lblSelectDateTime = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "lblSelectDateTime");
             rdEmail = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSRadioButton>(this, "rdEmail");
             rdCall = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSRadioButton>(this, "rdCall");
+            lblHowWouldYouLike = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "lblHowWouldYouLike");
             pickerHearAboutUs = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSPicker>(this, "pickerHearAboutUs");
+            btnSubmit = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSButton>(this, "btnSubmit");
+            btnCancel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSButton>(this, "btnCancel");
             viewDidYouKnow = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSDYKUI>(this, "viewDidYouKnow");
         }
     }

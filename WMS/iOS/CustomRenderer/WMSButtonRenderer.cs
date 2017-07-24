@@ -23,8 +23,10 @@ namespace WMS.iOS.CustomRenderer
 			{
                 if (Device.Idiom == TargetIdiom.Tablet)
                 {
-                    // do whatever you want to the UITextField here!
-                    Control.Font = UIFont.FromName(Control.Font.Name, Control.Font.PointSize + 11.0f);
+					// do whatever you want to the UITextField here!
+					// do whatever you want to the UITextField here!
+                    Control.TitleLabel.AdjustsFontSizeToFitWidth = true;
+					Control.TitleLabel.MinimumScaleFactor = 0.5f;
                 }
 			}
         }

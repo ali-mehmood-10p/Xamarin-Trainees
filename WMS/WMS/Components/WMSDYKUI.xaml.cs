@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using System.ComponentModel;
 using System.Reflection;
 using System.Linq;
+using WMS.CustomControls;
 
 namespace WMS.Components
 {
@@ -46,6 +47,21 @@ namespace WMS.Components
 			{
 				SetValue(LinkCommandSeeFAQsProperty, value);
                 lblDownloadWalkthroughs.ExternalCommand = this.LinkCommandWatchDemo;
+			}
+		}
+
+		public static readonly BindableProperty DescriptionFontSizeProperty = BindableProperty.Create("DescriptionFontSize", typeof(double), typeof(double), (double)0.0);
+		public double DescriptionFontSize
+		{
+			get { return (double)GetValue(DescriptionFontSizeProperty); }
+			set
+			{
+				SetValue(DescriptionFontSizeProperty, value);
+                lblWatchDemo.DescriptionFontSize = value;
+                lblDownloadWalkthroughs.DescriptionFontSize = value;
+				lblFAQs.DescriptionFontSize = value;
+                lblOr.FontSize = value;
+                lblHeader.FontSize = value + 2;
 			}
 		}
 

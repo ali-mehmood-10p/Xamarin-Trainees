@@ -14,6 +14,10 @@ WMS.Droid.CustomRenderer.WMSEntryRenderer, WMS.Droid;md54a9d855bac68e872b8602c50
 WMS.Droid.CustomRenderer.WMSEntryRenderer, WMS.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54a9d855bac68e872b8602c50267e2ff1.WMSEntryRenderer
 WMS.Droid.CustomRenderer.WMSEntryRenderer;md54a9d855bac68e872b8602c50267e2ff1.WMSEntryRenderer
 wms.droid.customrenderer.WMSEntryRenderer;md54a9d855bac68e872b8602c50267e2ff1.WMSEntryRenderer
+WMS.Droid.CustomRenderer.WMSEditorRenderer, WMS.Droid;md54a9d855bac68e872b8602c50267e2ff1.WMSEditorRenderer
+WMS.Droid.CustomRenderer.WMSEditorRenderer, WMS.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md54a9d855bac68e872b8602c50267e2ff1.WMSEditorRenderer
+WMS.Droid.CustomRenderer.WMSEditorRenderer;md54a9d855bac68e872b8602c50267e2ff1.WMSEditorRenderer
+wms.droid.customrenderer.WMSEditorRenderer;md54a9d855bac68e872b8602c50267e2ff1.WMSEditorRenderer
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor

@@ -15,7 +15,13 @@ namespace WMS.Components {
     public partial class WMSDYKUI : global::WMS.Components.BaseContentView {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSLabel lblHeader;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.Components.WMSLinkLabelUI lblWatchDemo;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSLabel lblOr;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.Components.WMSLinkLabelUI lblDownloadWalkthroughs;
@@ -26,7 +32,9 @@ namespace WMS.Components {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(WMSDYKUI));
+            lblHeader = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "lblHeader");
             lblWatchDemo = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSLinkLabelUI>(this, "lblWatchDemo");
+            lblOr = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "lblOr");
             lblDownloadWalkthroughs = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSLinkLabelUI>(this, "lblDownloadWalkthroughs");
             lblFAQs = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSLinkLabelUI>(this, "lblFAQs");
         }

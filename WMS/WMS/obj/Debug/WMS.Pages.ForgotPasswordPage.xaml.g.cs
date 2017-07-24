@@ -15,7 +15,10 @@ namespace WMS.Pages {
     public partial class ForgotPasswordPage : global::WMS.Pages.BaseContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::WMS.Components.WMSLogoUI LogoView;
+        private global::WMS.Components.WMSHeaderUI LogoView;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSLabel lblPageDescription;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::WMS.Components.WMSEntryUI txtEmail;
@@ -24,11 +27,20 @@ namespace WMS.Pages {
         private global::WMS.Components.WMSEntryUI txtCNIC;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSButton btnReset;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSButton btnCancel;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ForgotPasswordPage));
-            LogoView = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSLogoUI>(this, "LogoView");
+            LogoView = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSHeaderUI>(this, "LogoView");
+            lblPageDescription = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "lblPageDescription");
             txtEmail = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSEntryUI>(this, "txtEmail");
             txtCNIC = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.Components.WMSEntryUI>(this, "txtCNIC");
+            btnReset = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSButton>(this, "btnReset");
+            btnCancel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSButton>(this, "btnCancel");
         }
     }
 }

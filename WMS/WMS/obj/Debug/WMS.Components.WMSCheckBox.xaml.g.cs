@@ -18,9 +18,13 @@ namespace WMS.Components {
         private global::WMS.CustomControls.WMSImage chkBox;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::WMS.CustomControls.WMSLabel lblDescription;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(WMSCheckBox));
             chkBox = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSImage>(this, "chkBox");
+            lblDescription = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::WMS.CustomControls.WMSLabel>(this, "lblDescription");
         }
     }
 }

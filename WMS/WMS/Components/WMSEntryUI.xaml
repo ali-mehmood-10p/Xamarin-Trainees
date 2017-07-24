@@ -21,10 +21,10 @@
             <WMSControls:WMSImage x:Name="FieldIcon"
                 Source="{Binding ImageName}"
                 Aspect="Fill"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.04}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.13 }"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.13 }" />
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ImageOriginX}}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={StaticResource ImageOriginY}}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource AspectioRatioImage}}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource AspectioRatioImage}}" />
             <WMSControls:WMSEntry x:Name="txtEntry"
                 Placeholder="{Binding PlaceHolderText}"
                 BackgroundColor="Transparent"
@@ -36,4 +36,20 @@
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}" />
         </RelativeLayout>
     </Base:BaseContentView.Content>
+    <Base:BaseContentView.Resources>
+        <ResourceDictionary>
+            <OnIdiom x:Key="AspectioRatioImage"
+                x:TypeArguments="x:Double"
+                Phone="0.13"
+                Tablet="0.11" />
+            <OnIdiom x:Key="ImageOriginX"
+                x:TypeArguments="x:Double"
+                Phone="0.04"
+                Tablet="0.05" />         
+            <OnIdiom x:Key="ImageOriginY"
+                x:TypeArguments="x:Double"
+                Phone="0.15"
+                Tablet="0.1" />             
+        </ResourceDictionary>
+    </Base:BaseContentView.Resources>
 </Base:BaseContentView>

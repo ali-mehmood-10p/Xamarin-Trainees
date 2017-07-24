@@ -47,7 +47,6 @@
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Pages.LoginPage.xaml.g.cs
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Pages.ForgotPasswordPage.xaml.g.cs
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Components.WMSEntryUI.xaml.g.cs
-/Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Components.WMSLogoUI.xaml.g.cs
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Pages.BaseContentPage.xaml.g.cs
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Pages.MakeAppointmentPage.xaml.g.cs
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Components.WMSEntryUI2.xaml.g.cs
@@ -59,3 +58,4 @@
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Components.BaseContentView.xaml.g.cs
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.dll
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.pdb
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.csprojResolveAssemblyReference.cache

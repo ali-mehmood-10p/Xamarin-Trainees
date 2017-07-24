@@ -5,20 +5,23 @@ using WMS.Pages;
 using Xamarin.Forms;
 using WMS.ViewModels;
 using WMS.Utils;
+using WMS.Interfaces;
 
 namespace WMS.Pages
 {
-    public partial class ForgotPasswordPage : BaseContentPage
+    public partial class ForgotPasswordPage : BaseContentPage, IWMSPageFonts, IWMSPageBinding
     {
         ForgotPasswordPageViewModel viewModel;
 
         public ForgotPasswordPage()
         {
             InitializeComponent();
-            ConfigurePageBinding();
+
+			ConfigureFonts();
+			ConfigurePageBinding();
         }
 
-        void ConfigurePageBinding()
+        public void ConfigurePageBinding()
         {
             viewModel = new ForgotPasswordPageViewModel()
             {
@@ -31,7 +34,37 @@ namespace WMS.Pages
             txtCNIC.ExternalDataBinding = viewModel;
         }
 
-        void OnResetCompletion()
+        public void ConfigureFonts()
+		{
+			if (Device.Idiom == TargetIdiom.Phone)
+			{
+				LogoView.DescriptionFontSize = 50;
+                lblPageDescription.FontSize = 16;
+                btnReset.FontSize = 20;
+                btnCancel.FontSize = 20;
+			}
+			else
+			{
+				LogoView.DescriptionFontSize = 80;
+                lblPageDescription.FontSize = 22;
+
+				if (Device.RuntimePlatform == Device.iOS)
+				{
+					btnReset.FontSize = 26;
+					btnCancel.FontSize = 26;
+				}
+				else if (Device.RuntimePlatform == Device.Android)
+				{
+					btnReset.FontSize = 22;
+					btnCancel.FontSize = 22;
+				}
+
+                txtCNIC.DescriptionFontSize = 30;
+                txtEmail.DescriptionFontSize = 30;
+			}
+		}
+
+		void OnResetCompletion()
         {
             DisplayAlert("Info", "Password reset link has been sent to your given email address", "OK").ContinueWith((args) =>
             {

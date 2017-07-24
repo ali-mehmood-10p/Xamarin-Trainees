@@ -7,9 +7,10 @@
     xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"        
     x:Class="WMS.Components.WMSLinkLabelUI">
     <Base:BaseContentView.Content>
-        <WMSControls:WMSLabel Text="{Binding TitleText}"
+        <WMSControls:WMSLabel x:Name="lblDescription"
+            Text="{Binding TitleText}"
             TextColor="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}"
-            FontSize="16"
+            FontSize="{Binding DescriptionFontSize}"
             Style="{StaticResource WMSLinkLabelStyle}"
             YAlign="Center">
             <WMSControls:WMSLabel.GestureRecognizers>

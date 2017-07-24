@@ -13,7 +13,8 @@
             <WMSComponents:WMSHeaderUI x:Name="LogoView"
                 TitleText="MAKE AN APPOINTMENT"
                 HorizontalOptions="FillAndExpand"
-                HeightRequest="100" />
+                YAlignDescription="End"
+                HeightRequest="{StaticResource LogoBannerHeight}" />
             <ScrollView>
                 <StackLayout Spacing="12"
                     Margin="20,0,20,0">
@@ -38,7 +39,8 @@
                         PlaceHolderText="City"
                         HeightRequest="{StaticResource TextFieldHeightConstant}"
                         ExternalDataBindingPropertyName="City" />
-                    <WMSControls:WMSLabel Text="{StaticResource SelectDateTimeText}" />
+                    <WMSControls:WMSLabel x:Name="lblSelectDateTime"
+                        Text="{StaticResource SelectDateTimeText}" />
                     <StackLayout Orientation="Horizontal">
                         <WMSComponents:WMSRadioButton x:Name="rdEmail"
                             SelectedImageName="radio_sprite_selected"
@@ -54,7 +56,7 @@
                             TitleText="Call"
                             GroupID="HowToContact"
                             HorizontalOptions="FillAndExpand">
-                        </WMSComponents:WMSRadioButton>                        
+                        </WMSComponents:WMSRadioButton>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <WMSControls:WMSDatePicker HorizontalOptions="FillAndExpand">
@@ -62,27 +64,33 @@
                         <WMSControls:WMSTimePicker HorizontalOptions="FillAndExpand">
                         </WMSControls:WMSTimePicker>
                     </StackLayout>
-                    <WMSControls:WMSLabel Text="{StaticResource ContactedKeyText}" />
+                    <WMSControls:WMSLabel x:Name="lblHowWouldYouLike"
+                        Text="{StaticResource ContactedKeyText}" />
                     <WMSControls:WMSPicker x:Name="pickerHearAboutUs"
                         Title="{StaticResource HearAboutUsText}"
                         ItemsSource="{Binding HearAboutUsCollection}"
                         SelectedIndexChanged="Handle_SelectedIndexChanged">
                     </WMSControls:WMSPicker>
-                    <WMSControls:WMSEditor BackgroundColor="{x:Static WMSUtils:WMSTheme.TextFieldGreyColor}"
-                        HeightRequest="100">
+                    <WMSControls:WMSEditor 
+                        Placeholder="Remarks (if any)"
+                        HeightRequest="{StaticResource RemarksHeight}">
                     </WMSControls:WMSEditor>
                     <StackLayout Orientation="Horizontal">
                         <BoxView WidthRequest="30" />
-                        <WMSControls:WMSButton Text="Submit"
+                        <WMSControls:WMSButton x:Name="btnSubmit"
+                            Text="Submit"
                             Command="{Binding OnSubmit_Clicked}"
                             Style="{StaticResource WMSButtonStyle}"
-                            HorizontalOptions="FillAndExpand">
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="{StaticResource TextFieldHeightConstant}">
                         </WMSControls:WMSButton>
                         <BoxView WidthRequest="20" />
-                        <WMSControls:WMSButton Text="Cancel"
+                        <WMSControls:WMSButton x:Name="btnCancel"
+                            Text="Cancel"
                             Clicked="Cancel_Clicked"
                             Style="{StaticResource WMSButtonStyle}"
-                            HorizontalOptions="FillAndExpand">
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="{StaticResource TextFieldHeightConstant}">
                         </WMSControls:WMSButton>
                         <BoxView WidthRequest="30" />
                     </StackLayout>
@@ -97,8 +105,10 @@
         <ResourceDictionary>
             <x:String x:Key="SelectDateTimeText">Please select preferred date and time according to Pakistan Standard Time</x:String>
             <x:String x:Key="ContactedKeyText">How would you like to be contacted?</x:String>
-            <x:String x:Key="HearAboutUsText">How/Where did you hear about us?</x:String>
-            <x:Double x:Key="TextFieldHeightConstant">50</x:Double>
+            <x:String x:Key="HearAboutUsText">How/Where did you hear about us?</x:String>    
+            <OnIdiom x:Key="TextFieldHeightConstant" x:TypeArguments="x:Double" Phone="50" Tablet="70" />               
+            <OnIdiom x:Key="LogoBannerHeight" x:TypeArguments="x:Double" Phone="100" Tablet="150" />   
+            <OnIdiom x:Key="RemarksHeight" x:TypeArguments="x:Double" Phone="100" Tablet="200" />               
         </ResourceDictionary>
     </Base:BaseContentPage.Resources>
 </Base:BaseContentPage>

@@ -8,9 +8,9 @@
     x:Class="WMS.Components.WMSDYKUI">
     <Base:BaseContentView.Content>
         <StackLayout>
-            <WMSControls:WMSLabel Text="{StaticResource DidYouKnowText}"
+            <WMSControls:WMSLabel  x:Name="lblHeader"
+                Text="{StaticResource DidYouKnowText}"
                 TextColor="Black"
-                FontSize="18"
                 FontAttributes="Bold">
             </WMSControls:WMSLabel>
             <BoxView HeightRequest="2"
@@ -19,9 +19,9 @@
             <BoxView HeightRequest="15" />
             <WMSComponents:WMSLinkLabelUI x:Name="lblWatchDemo"
                 TitleText="{StaticResource ClickToWatchDemoText}" />
-            <WMSControls:WMSLabel Text="OR"
-                TextColor="Black"
-                FontSize="19">
+            <WMSControls:WMSLabel x:Name="lblOr"
+                Text="OR"
+                TextColor="Black">
             </WMSControls:WMSLabel>            
             <WMSComponents:WMSLinkLabelUI x:Name="lblDownloadWalkthroughs"
                 TitleText="{StaticResource DownloadWalkThroughText}" />

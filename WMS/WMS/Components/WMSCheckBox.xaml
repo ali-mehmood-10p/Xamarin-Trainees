@@ -21,9 +21,11 @@
                     Source="checked"
                     WidthRequest="25">
                 </WMSControls:WMSImage>
-                <WMSControls:WMSLabel Text="{Binding TitleText}"
+                <WMSControls:WMSLabel  x:Name="lblDescription"
+                    Text="{Binding TitleText}"
                     VerticalTextAlignment="Center"
                     HorizontalOptions="FillAndExpand"
+                    FontSize="{Binding DescriptionFontSize}"
                     FontAttributes="Bold">
                 </WMSControls:WMSLabel>
             </StackLayout>
@@ -31,5 +33,5 @@
                 <TapGestureRecognizer Tapped="CheckBox_Clicked" />
             </Grid.GestureRecognizers>
         </Grid>
-    </Base:BaseContentView.Content>
+    </Base:BaseContentView.Content>  
 </Base:BaseContentView>

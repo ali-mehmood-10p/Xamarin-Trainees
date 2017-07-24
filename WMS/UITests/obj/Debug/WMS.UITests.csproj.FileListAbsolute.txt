@@ -24,6 +24,7 @@
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.UITest.xml
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.Forms.Core.xml
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/bin/Debug/Xamarin.Forms.Xaml.xml
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/obj/Debug/WMS.UITests.csprojResolveAssemblyReference.cache
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/obj/Debug/WMS.UITests.csproj.CoreCompileInputs.cache
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/obj/Debug/WMS.UITests.dll
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/UITests/obj/Debug/WMS.UITests.pdb

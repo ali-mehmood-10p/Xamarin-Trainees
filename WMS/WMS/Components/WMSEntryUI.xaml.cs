@@ -40,16 +40,20 @@ namespace WMS.Components
 			}
 		}
 
-        public WMSEntryUI()
+        public static readonly BindableProperty DescriptionFontSizeProperty = BindableProperty.Create("DescriptionFontSize", typeof(double), typeof(double), (double)0.0);
+		public double DescriptionFontSize
         {
-            if(Device.Idiom == TargetIdiom.Tablet)
+            get { return (double)GetValue(DescriptionFontSizeProperty); }
+            set
             {
-                //FieldIcon.
+                SetValue(DescriptionFontSizeProperty, value);
+                txtEntry.FontSize = value;
             }
+        }
 
+		public WMSEntryUI()
+        {
             InitializeComponent();
-            RelativeLayout layout = (RelativeLayout)Content;
-            var k = layout.Children[1];
         }
     }
 }

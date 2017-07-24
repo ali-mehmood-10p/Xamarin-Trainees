@@ -6,6 +6,7 @@ namespace WMS.CustomControls
     {
         public WMSPicker()
         {
+            
         }
     }
 }

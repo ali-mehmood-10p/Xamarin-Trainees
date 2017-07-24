@@ -4,10 +4,12 @@ using WMS.Pages;
 using WMS.ViewModels;
 using Xamarin.Forms;
 using WMS.Utils;
+using WMS.Interfaces;
+using System.Threading.Tasks;
 
 namespace WMS.Pages
 {
-    public partial class MakeAppointmentPage : BaseContentPage
+    public partial class MakeAppointmentPage : BaseContentPage, IWMSPageFonts, IWMSPageBinding
     {
         MakeAppointmentPageViewModel viewModel;
         WMSRadioButtonsGroupManager radioButtonsManager;
@@ -16,14 +18,16 @@ namespace WMS.Pages
         {
             InitializeComponent();
 
-            ConfigurePageBinding();
-            RegisterDidYouKnowViewCallBacks();
-            ConfigureRadioButtons();
-            RegisterRadioButtonCallBacks();
-            SelectDefaultRadioButton();
+			ConfigurePageBinding();
+            ConfigureFonts();
+			ConfigureRadioButtons();
+			SelectDefaultRadioButton();
+			LogoView.AdjustUIForSubHeader();
+			RegisterDidYouKnowViewCallBacks();
+			RegisterRadioButtonCallBacks();
         }
 
-        void ConfigurePageBinding()
+        public void ConfigurePageBinding()
         {
             viewModel = new MakeAppointmentPageViewModel()
             {
@@ -32,6 +36,43 @@ namespace WMS.Pages
             };
 
             BindingContext = viewModel;
+        }
+
+        public void ConfigureFonts()
+        {
+			if (Device.Idiom == TargetIdiom.Phone)
+			{
+                LogoView.DescriptionFontSize = 17;
+				viewDidYouKnow.DescriptionFontSize = 17;
+			}
+			else
+			{
+                LogoView.DescriptionFontSize = 22;
+
+				if (Device.RuntimePlatform == Device.iOS)
+				{
+					btnSubmit.FontSize = 26;
+					btnCancel.FontSize = 26;
+				}
+				else if (Device.RuntimePlatform == Device.Android)
+				{
+					btnSubmit.FontSize = 22;
+					btnCancel.FontSize = 22;
+				}
+
+                lblHowWouldYouLike.FontSize = 22;
+                lblSelectDateTime.FontSize = 22;
+
+                viewDidYouKnow.DescriptionFontSize = 20;
+                rdCall.DescriptionFontSize = 20;
+                rdEmail.DescriptionFontSize = 20;
+
+                txtName.DescriptionFontSize = 22;
+                txtCity.DescriptionFontSize = 22;
+                txtCountry.DescriptionFontSize = 22;
+                txtContactNo.DescriptionFontSize = 22;
+                txtEmaillAddress.DescriptionFontSize = 22;
+			}
         }
 
         void ConfigureRadioButtons()
@@ -103,4 +144,5 @@ namespace WMS.Pages
 			}
 		}
     }
+	
 }

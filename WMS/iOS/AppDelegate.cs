@@ -14,6 +14,11 @@ namespace WMS.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+            // Code for starting up the Xamarin Test Cloud Agent
+#if DEBUG
+			Xamarin.Calabash.Start();
+#endif
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Base="clr-namespace:WMS.Pages;assembly=WMS"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSUtils="clr-namespace:WMS.Utils;assembly=WMS"
+    x:Class="WMS.Pages.MakeAppointmentPage"
+    NavigationPage.HasNavigationBar="false">
+    <Base:BaseContentPage.Content>
+        <StackLayout>
+            <!--Created logo View-->
+            <WMSComponents:WMSHeaderUI x:Name="LogoView"
+                TitleText="MAKE AN APPOINTMENT"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="100" />
+            <ScrollView>
+                <StackLayout Spacing="12"
+                    Margin="20,0,20,0">
+                    <BoxView HeightRequest="5" />
+                    <WMSComponents:WMSEntryUI2 x:Name="txtName"
+                        PlaceHolderText="Name"
+                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        ExternalDataBindingPropertyName="Name" />
+                    <WMSComponents:WMSEntryUI2 x:Name="txtContactNo"
+                        PlaceHolderText="Contact No. (92-3XX-XXXXXXX)"
+                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        ExternalDataBindingPropertyName="ContactNo" />
+                    <WMSComponents:WMSEntryUI2 x:Name="txtEmaillAddress"
+                        PlaceHolderText="Email Address"
+                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        ExternalDataBindingPropertyName="EmailAddress" />
+                    <WMSComponents:WMSEntryUI2 x:Name="txtCountry"
+                        PlaceHolderText="Country"
+                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        ExternalDataBindingPropertyName="Country" />
+                    <WMSComponents:WMSEntryUI2 x:Name="txtCity"
+                        PlaceHolderText="City"
+                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        ExternalDataBindingPropertyName="City" />
+                    <WMSControls:WMSLabel Text="{StaticResource SelectDateTimeText}" />
+                    <StackLayout Orientation="Horizontal">
+                        <WMSComponents:WMSRadioButton x:Name="rdEmail"
+                            SelectedImageName="radio_sprite_selected"
+                            UnSelectedImageName="radio_sprite_unselected"
+                            TitleText="Email"
+                            GroupID="HowToContact"
+                            HorizontalOptions="FillAndExpand">
+                        </WMSComponents:WMSRadioButton>
+                        <BoxView WidthRequest="10" />
+                        <WMSComponents:WMSRadioButton x:Name="rdCall"
+                            SelectedImageName="radio_sprite_selected"
+                            UnSelectedImageName="radio_sprite_unselected"
+                            TitleText="Call"
+                            GroupID="HowToContact"
+                            HorizontalOptions="FillAndExpand">
+                        </WMSComponents:WMSRadioButton>                        
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <WMSControls:WMSDatePicker HorizontalOptions="FillAndExpand">
+                        </WMSControls:WMSDatePicker>
+                        <WMSControls:WMSTimePicker HorizontalOptions="FillAndExpand">
+                        </WMSControls:WMSTimePicker>
+                    </StackLayout>
+                    <WMSControls:WMSLabel Text="{StaticResource ContactedKeyText}" />
+                    <WMSControls:WMSPicker x:Name="pickerHearAboutUs"
+                        Title="{StaticResource HearAboutUsText}"
+                        ItemsSource="{Binding HearAboutUsCollection}"
+                        SelectedIndexChanged="Handle_SelectedIndexChanged">
+                    </WMSControls:WMSPicker>
+                    <WMSControls:WMSEditor BackgroundColor="{x:Static WMSUtils:WMSTheme.TextFieldGreyColor}"
+                        HeightRequest="100">
+                    </WMSControls:WMSEditor>
+                    <StackLayout Orientation="Horizontal">
+                        <BoxView WidthRequest="30" />
+                        <WMSControls:WMSButton Text="Submit"
+                            Command="{Binding OnSubmit_Clicked}"
+                            Style="{StaticResource WMSButtonStyle}"
+                            HorizontalOptions="FillAndExpand">
+                        </WMSControls:WMSButton>
+                        <BoxView WidthRequest="20" />
+                        <WMSControls:WMSButton Text="Cancel"
+                            Clicked="Cancel_Clicked"
+                            Style="{StaticResource WMSButtonStyle}"
+                            HorizontalOptions="FillAndExpand">
+                        </WMSControls:WMSButton>
+                        <BoxView WidthRequest="30" />
+                    </StackLayout>
+                    <BoxView HeightRequest="10" />
+                    <WMSComponents:WMSDYKUI x:Name="viewDidYouKnow">
+                    </WMSComponents:WMSDYKUI>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </Base:BaseContentPage.Content>
+    <Base:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="SelectDateTimeText">Please select preferred date and time according to Pakistan Standard Time</x:String>
+            <x:String x:Key="ContactedKeyText">How would you like to be contacted?</x:String>
+            <x:String x:Key="HearAboutUsText">How/Where did you hear about us?</x:String>
+            <x:Double x:Key="TextFieldHeightConstant">50</x:Double>
+        </ResourceDictionary>
+    </Base:BaseContentPage.Resources>
+</Base:BaseContentPage>

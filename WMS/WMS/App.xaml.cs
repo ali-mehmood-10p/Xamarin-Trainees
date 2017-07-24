@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using WMS.Pages;
+using Xamarin.Forms;
 
 namespace WMS
 {
@@ -8,7 +9,7 @@ namespace WMS
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            SetupEnvironment();
         }
 
         protected override void OnStart()
@@ -20,10 +21,16 @@ namespace WMS
         {
             // Handle when your app sleeps
         }
-
+ 
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        void SetupEnvironment() 
+        {
+            NavigationPage navigationPage = new NavigationPage(new LoginPage());
+            MainPage = navigationPage;
         }
     }
 }

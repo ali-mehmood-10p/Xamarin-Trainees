@@ -1,27 +1,21 @@
-﻿<Properties StartupConfiguration="{80D3DC0A-9630-4204-B5DA-5A520C2774D7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Renderer/CustomFrameRenderer.cs">
+﻿<Properties StartupConfiguration="{D173FB75-50F5-4FE4-ADC3-3324EB2073B0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WMS/App.xaml">
     <Files>
-      <File FileName="WMS/App.xaml.cs" Line="11" Column="37" />
-      <File FileName="WMS/Views/LoginPage.xaml" Line="28" Column="45" />
-      <File FileName="WMS/Views/LoginPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="WMS/Utils/Colors.cs" Line="1" Column="1" />
-      <File FileName="WMS/ViewModels/LoginViewModel.cs" Line="14" Column="9" />
-      <File FileName="WMS/ViewModels/BaseViewModel.cs" Line="18" Column="6" />
-      <File FileName="iOS/Renderer/TransparentEntryRenderer.cs" Line="23" Column="4" />
-      <File FileName="Droid/Renderer/TransparentEntryRenderer.cs" Line="21" Column="4" />
-      <File FileName="WMS/Controls/CustomFrame.cs" Line="8" Column="21" />
-      <File FileName="WMS/Controls/TransparentEntry.cs" Line="13" Column="1" />
-      <File FileName="Droid/Renderer/CustomFrameRenderer.cs" Line="33" Column="27" />
-      <File FileName="WMS/Controls/TransparentButton.cs" Line="11" Column="6" />
-      <File FileName="Droid/Renderer/TransparentButtonRenderer.cs" Line="1" Column="1" />
+      <File FileName="WMS/App.xaml" Line="35" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/shahan/Xamarin-Trainees/Assignment01/WMS/iOS/CustomRenderer/WMSButtonRenderer.cs" relfile="iOS/CustomRenderer/WMSButtonRenderer.cs" line="40" column="1" />
+      <Breakpoint file="/Users/shahan/Xamarin-Trainees/Assignment01/WMS/iOS/CustomRenderer/WMSButtonRenderer.cs" relfile="iOS/CustomRenderer/WMSButtonRenderer.cs" line="35" column="1" />
+      <Breakpoint file="/Users/shahan/Xamarin-Trainees/Assignment01/WMS/iOS/CustomRenderer/WMSButtonRenderer.cs" relfile="iOS/CustomRenderer/WMSButtonRenderer.cs" line="48" column="4" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.WMS.Droid PreferredExecutionTarget="Android.LHTDU16812020674" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WMS.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.8AC733B5-CD5F-47E8-A8D0-EFA73162E0C8" />
+  <MonoDevelop.Ide.ItemProperties.WMS.Droid PreferredExecutionTarget="Android.192.168.56.101:5555" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="WMS/ViewModels/ForgotPasswordPageViewModel.cs" line="53" offsetX="510" offsetY="1040" expression="CNIC" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.WMS.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.2DD614E7-056A-4341-8F49-81231BE8C8F5" />
   <MultiItemStartupConfigurations />
 </Properties>

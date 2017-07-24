@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSUtils="clr-namespace:WMS.Utils;assembly=WMS"
+    xmlns:Base="clr-namespace:WMS.Pages;assembly=WMS"
+    x:Class="WMS.Pages.LoginPage"
+    NavigationPage.HasNavigationBar="false">
+    <Base:BaseContentPage.Content>
+        <ScrollView>
+            <RelativeLayout>
+                <!--Created logo View-->
+                <WMSComponents:WMSLogoUI x:Name="LogoView"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Constant=0}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Constant=0}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}" />
+                <!--Created Sign in Label-->
+                <WMSControls:WMSLabel x:Name="lblSignIn"
+                    Text="Sign in"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, ElementName=LogoView, Constant=0}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, ElementName=LogoView, Factor={x:Static WMSUtils:WMSConstants.LOGO_HEIGHT_PERCENTAGE_ON_PAGE}}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.08}"
+                    TextColor="Black"
+                    Font="{x:Static WMSUtils:WMSTheme.FontName}"
+                    FontAttributes="Bold"
+                    XAlign="Center"
+                    YAlign="Center"
+                    HeightRequest="40" />
+                <!--Composing User ID View-->
+                <WMSComponents:WMSEntryUI x:Name="txtID"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ComponentsXAlignmentPercentage}}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.385}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource PaddedComponentPercentageWidth}}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
+                    ImageName="user_id"
+                    PlaceHolderText="User ID"
+                    ExternalDataBindingPropertyName="UserName" />
+                <!--Composing Password View-->
+                <WMSComponents:WMSEntryUI x:Name="txtPassword"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ComponentsXAlignmentPercentage}}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.49}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource PaddedComponentPercentageWidth}}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
+                    ImageName="password"
+                    PlaceHolderText="Password"
+                    ExternalDataBindingPropertyName="Password"
+                    IsSecureTextEntry="true" />
+                <!--Created Login Button-->
+                <WMSControls:WMSButton Text="Login"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ComponentsXAlignmentPercentage}}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.596}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource PaddedComponentPercentageWidth}}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
+                    TextColor="White"
+                    Command="{Binding OnLogin_Clicked}"
+                    BackgroundColor="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}"
+                    Font="{x:Static WMSUtils:WMSTheme.FontName}"
+                    FontAttributes="Bold" />
+                <!--Forgot password row-->
+                <StackLayout x:Name="HorStack"
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ComponentsXAlignmentPercentage}}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.70}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource PaddedComponentPercentageWidth}}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.08}">
+                    <WMSComponents:WMSCheckBox x:Name="chkRememberMe"
+                        TitleText="Remember Me"
+                        CheckedImageName="checked"
+                        UnCheckedImageName="unchecked">
+                    </WMSComponents:WMSCheckBox>
+                    <BoxView HorizontalOptions="FillAndExpand"
+                        BackgroundColor="Transparent" />
+                    <WMSControls:WMSLabel Text="{StaticResource ForgotPasswordKeyText}"
+                        YAlign="Center"
+                        TextColor="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}"
+                        FontSize="17">
+                        <WMSControls:WMSLabel.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ForgotPassword_Clicked"
+                                TappedCallbackParameter="Image1" />
+                        </WMSControls:WMSLabel.GestureRecognizers>
+                    </WMSControls:WMSLabel>
+                </StackLayout>
+                <!--Not a Customer row-->
+                <WMSControls:WMSLabel Text="{StaticResource NotACustomerKeyText}"
+                    TextColor="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}"
+                    FontSize="14"
+                    YAlign="Center"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ComponentsXAlignmentPercentage}}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.79}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant, Property=Width, Constant=160}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.03}">
+                    <WMSControls:WMSLabel.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NotACustomer_Clicked"
+                            TappedCallbackParameter="Image1" />
+                    </WMSControls:WMSLabel.GestureRecognizers>
+                </WMSControls:WMSLabel>
+                <!--Created Make an Appointment Button-->
+                <WMSControls:WMSButton Text="{StaticResource MakeAnAppointmentKeyText}"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ActionButtonXAlignmentPercentage}}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.825}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ActionButtonPercentageWidth}}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.09}"
+                    TextColor="White"
+                    Clicked="MakeAnAppointment_Clicked"
+                    BackgroundColor="{x:Static WMSUtils:WMSTheme.ThemeGreyColor}"
+                    Font="{x:Static WMSUtils:WMSTheme.FontName}"
+                    FontAttributes="Bold" />
+                <WMSControls:WMSImage Source="footer"
+                    Aspect="Fill"
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Property=X, Constant=0}"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.96}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.04}" />
+            </RelativeLayout>
+        </ScrollView>
+    </Base:BaseContentPage.Content>
+    <Base:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="ForgotPasswordKeyText">Forgot Password?</x:String>
+            <x:String x:Key="NotACustomerKeyText">Not a Customer?</x:String>
+            <x:String x:Key="MakeAnAppointmentKeyText">Make an Appointment</x:String>
+        </ResourceDictionary>
+    </Base:BaseContentPage.Resources>
+</Base:BaseContentPage>

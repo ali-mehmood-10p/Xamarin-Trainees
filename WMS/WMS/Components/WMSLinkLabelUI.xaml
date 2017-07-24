@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSUtils="clr-namespace:WMS.Utils;assembly=WMS"
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"        
+    x:Class="WMS.Components.WMSLinkLabelUI">
+    <Base:BaseContentView.Content>
+        <WMSControls:WMSLabel Text="{Binding TitleText}"
+            TextColor="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}"
+            FontSize="16"
+            Style="{StaticResource WMSLinkLabelStyle}"
+            YAlign="Center">
+            <WMSControls:WMSLabel.GestureRecognizers>
+                <TapGestureRecognizer Tapped="LinkLabel_Clicked"
+                    TappedCallbackParameter="Image1" />
+            </WMSControls:WMSLabel.GestureRecognizers>
+        </WMSControls:WMSLabel>
+    </Base:BaseContentView.Content>
+    <Base:BaseContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="WMSLinkLabelStyle"
+                TargetType="Label">
+                <Setter Property="TextColor"
+                    Value="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}" />
+            </Style>
+        </ResourceDictionary>
+    </Base:BaseContentView.Resources>
+</Base:BaseContentView>

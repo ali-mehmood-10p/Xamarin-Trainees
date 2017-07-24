@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>WMS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.wms</string>
+	<string>com.10p.wms</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

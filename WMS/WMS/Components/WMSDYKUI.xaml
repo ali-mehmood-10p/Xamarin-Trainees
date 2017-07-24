@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSUtils="clr-namespace:WMS.Utils;assembly=WMS"
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"        
+    x:Class="WMS.Components.WMSDYKUI">
+    <Base:BaseContentView.Content>
+        <StackLayout>
+            <WMSControls:WMSLabel Text="{StaticResource DidYouKnowText}"
+                TextColor="Black"
+                FontSize="18"
+                FontAttributes="Bold">
+            </WMSControls:WMSLabel>
+            <BoxView HeightRequest="2"
+                BackgroundColor="Black">
+            </BoxView>
+            <BoxView HeightRequest="15" />
+            <WMSComponents:WMSLinkLabelUI x:Name="lblWatchDemo"
+                TitleText="{StaticResource ClickToWatchDemoText}" />
+            <WMSControls:WMSLabel Text="OR"
+                TextColor="Black"
+                FontSize="19">
+            </WMSControls:WMSLabel>            
+            <WMSComponents:WMSLinkLabelUI x:Name="lblDownloadWalkthroughs"
+                TitleText="{StaticResource DownloadWalkThroughText}" />
+            <BoxView HeightRequest="10" />            
+            <WMSComponents:WMSLinkLabelUI x:Name="lblFAQs"
+                TitleText="{StaticResource SeeFAQText}"/>          
+            <BoxView HeightRequest="40" />             
+        </StackLayout>
+    </Base:BaseContentView.Content>
+    <Base:BaseContentView.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="DidYouKnowText">Did You Know?</x:String>
+            <x:String x:Key="ClickToWatchDemoText">Click here to watch the Demo</x:String>
+            <x:String x:Key="DownloadWalkThroughText">Download walkthrough (PDF)</x:String>
+            <x:String x:Key="SeeFAQText">See FAQ's for more details</x:String>            
+        </ResourceDictionary>
+    </Base:BaseContentView.Resources>
+</Base:BaseContentView>

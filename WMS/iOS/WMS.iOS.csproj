@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{60CB1541-C564-48EC-8C6D-13302911BD89}</ProjectGuid>
+    <ProjectGuid>{D173FB75-50F5-4FE4-ADC3-3324EB2073B0}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>WMS.iOS</RootNamespace>
@@ -23,7 +23,7 @@
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
-    <IOSDebuggerPort>25344</IOSDebuggerPort>
+    <IOSDebuggerPort>52209</IOSDebuggerPort>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -72,7 +72,7 @@
     <MtouchFastDev>true</MtouchFastDev>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <IOSDebuggerPort>13534</IOSDebuggerPort>
+    <IOSDebuggerPort>57284</IOSDebuggerPort>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -95,10 +95,13 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.4.231\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.20.3\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WMS\WMS.csproj">
-      <Project>{4A6AEC3D-8595-41EB-8166-9514C0767120}</Project>
+      <Project>{A66F8AA4-2E18-4109-A96D-EC3339F159D7}</Project>
       <Name>WMS</Name>
     </ProjectReference>
   </ItemGroup>
@@ -108,7 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="Renderer\" />
+    <Folder Include="CustomRenderer\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -121,11 +124,19 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Renderer\TransparentEntryRenderer.cs" />
+    <Compile Include="CustomRenderer\WMSEntryRenderer.cs" />
+    <Compile Include="CustomRenderer\WMSButtonRenderer.cs" />
+    <Compile Include="CustomRenderer\WMSLabelRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\user_pic.png" />
     <BundleResource Include="Resources\password.png" />
+    <BundleResource Include="Resources\user_id.png" />
+    <BundleResource Include="Resources\entry_placeholder.png" />
+    <BundleResource Include="Resources\footer.png" />
+    <BundleResource Include="Resources\radio_sprite_selected.png" />
+    <BundleResource Include="Resources\radio_sprite_unselected.png" />
+    <BundleResource Include="Resources\checked.png" />
+    <BundleResource Include="Resources\unchecked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:WMSUtils="clr-namespace:WMS.Utils;assembly=WMS"
+    x:Class="WMS.Components.WMSLogoUI2">
+    <ContentView.Content>
+        <RelativeLayout VerticalOptions="FillAndExpand"
+            BackgroundColor="White"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}">
+            <BoxView x:Name="BoxView"
+                Color="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}"
+                BackgroundColor="Aqua"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}" />
+            <WMSControls:WMSLabel 
+                Text="{Binding TitleText}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, ElementName=BoxView, Constant=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y, ElementName=BoxView, Constant=0}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}"
+                TextColor="White"
+                Font="{x:Static WMSUtils:WMSTheme.FontName}"
+                FontSize="15"
+                XAlign="Center"
+                YAlign="End"
+                FontAttributes="Bold" />
+        </RelativeLayout>
+    </ContentView.Content>
+</ContentView>

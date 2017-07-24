@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:WMSUtils="clr-namespace:WMS.Utils;assembly=WMS"
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
+    x:Class="WMS.Components.WMSEntryUI">
+    <Base:BaseContentView.Content>
+        <RelativeLayout VerticalOptions="FillAndExpand"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={x:Static WMSUtils:WMSConstants.LOGO_HEIGHT_PERCENTAGE_ON_PAGE}}">
+            <WMSControls:WMSImage x:Name="FieldPlaceHolder"
+                Source="entry_placeholder"
+                Aspect="Fill"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Constant=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0.38}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}" />
+            <WMSControls:WMSImage x:Name="FieldIcon"
+                Source="{Binding ImageName}"
+                Aspect="Fill"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.04}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.13 }"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.13 }" />
+            <WMSControls:WMSEntry x:Name="txtEntry"
+                Placeholder="{Binding PlaceHolderText}"
+                BackgroundColor="Transparent"
+                Text="{Binding TitleText}"
+                IsPassword="{Binding IsSecureTextEntry}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.21}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.78}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}" />
+        </RelativeLayout>
+    </Base:BaseContentView.Content>
+</Base:BaseContentView>

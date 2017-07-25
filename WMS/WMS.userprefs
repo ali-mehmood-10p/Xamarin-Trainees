@@ -4,7 +4,7 @@
       <File FileName="WMS/Pages/MakeAppointmentPage.xaml.cs" Line="48" Column="8" />
       <File FileName="WMS/Pages/MakeAppointmentPage.xaml" Line="114" Column="24" />
       <File FileName="WMS/Pages/LoginPage.xaml.cs" Line="96" Column="1" />
-      <File FileName="WMS/Components/WMSDYKUI.xaml.cs" Line="7" Column="19" />
+      <File FileName="WMS/Components/WMSDYKUI.xaml.cs" Line="62" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -42,6 +42,7 @@
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/bin/Debug/Xamarin.Forms.Xaml.pdb
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/bin/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/bin/Debug/Xamarin.Forms.Xaml.xml
+/Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.csprojResolveAssemblyReference.cache
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.csproj.CoreCompileInputs.cache
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.App.xaml.g.cs
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Pages.LoginPage.xaml.g.cs
@@ -58,4 +59,3 @@
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.Components.BaseContentView.xaml.g.cs
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.dll
 /Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.pdb
-/Users/shahan/Xamarin-Trainees/Assignment01/WMS/WMS/obj/Debug/WMS.csprojResolveAssemblyReference.cache

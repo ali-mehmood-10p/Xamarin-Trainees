@@ -14,9 +14,8 @@
                 FontAttributes="Bold">
             </WMSControls:WMSLabel>
             <BoxView HeightRequest="2"
-                BackgroundColor="Black">
+                BackgroundColor="Black" Margin="0,0,0,15">
             </BoxView>
-            <BoxView HeightRequest="15" />
             <WMSComponents:WMSLinkLabelUI x:Name="lblWatchDemo"
                 TitleText="{StaticResource ClickToWatchDemoText}" />
             <WMSControls:WMSLabel x:Name="lblOr"
@@ -24,11 +23,9 @@
                 TextColor="Black">
             </WMSControls:WMSLabel>            
             <WMSComponents:WMSLinkLabelUI x:Name="lblDownloadWalkthroughs"
-                TitleText="{StaticResource DownloadWalkThroughText}" />
-            <BoxView HeightRequest="10" />            
+                TitleText="{StaticResource DownloadWalkThroughText}" Margin="0,0,0,10"/>          
             <WMSComponents:WMSLinkLabelUI x:Name="lblFAQs"
-                TitleText="{StaticResource SeeFAQText}"/>          
-            <BoxView HeightRequest="40" />             
+                TitleText="{StaticResource SeeFAQText}" Margin="0,0,0,40"/>                      
         </StackLayout>
     </Base:BaseContentView.Content>
     <Base:BaseContentView.Resources>

@@ -14,7 +14,6 @@
                 <WMSComponents:WMSHeaderUI x:Name="LogoView"
                     TitleText="WMS"                    
                     YAlignDescription="Center"
-                    DescriptionSpaceRatio="1.0"
                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Constant=0}"
                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Constant=0}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"

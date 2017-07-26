@@ -8,15 +8,7 @@
     x:Class="WMS.Components.WMSEntryUI2">
     <Base:BaseContentView.Content>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
             <Frame x:Name="OuterView"
-                Grid.Row="0"
-                Grid.Column="0"
                 Margin="1"
                 HasShadow="false"
                 BackgroundColor="{x:Static WMSUtils:WMSTheme.TextFieldGreyColor}" />
@@ -27,9 +19,14 @@
                 Placeholder="{Binding PlaceHolderText}"
                 Text="{Binding Text}" 
                 IsPassword="{Binding IsSecureTextEntry}"                
-                Margin="3"
+                Margin="{StaticResource FieldThickness}"
                 VerticalOptions="FillAndExpand">
             </WMSControls:WMSEntry>
         </Grid>
     </Base:BaseContentView.Content>
+    <Base:BaseContentView.Resources>
+        <ResourceDictionary>
+            <OnIdiom x:Key="FieldThickness" x:TypeArguments="Thickness" Phone="3" Tablet="8" />            
+        </ResourceDictionary>
+    </Base:BaseContentView.Resources>        
 </Base:BaseContentView>

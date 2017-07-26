@@ -6,50 +6,34 @@
     xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
     x:Class="WMS.Components.WMSEntryUI">
     <Base:BaseContentView.Content>
-        <RelativeLayout VerticalOptions="FillAndExpand"
-            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
-            RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={x:Static WMSUtils:WMSConstants.LOGO_HEIGHT_PERCENTAGE_ON_PAGE}}">
+        <Grid BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="4.25*" /> 
+            </Grid.ColumnDefinitions>
             <WMSControls:WMSImage x:Name="FieldPlaceHolder"
+                Grid.ColumnSpan="2"
                 Source="entry_placeholder"
-                Aspect="Fill"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Constant=0}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0.38}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}" />
+                Aspect="Fill" />            
             <WMSControls:WMSImage x:Name="FieldIcon"
-                Source="{Binding ImageName}"
-                Aspect="Fill"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource ImageOriginX}}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={StaticResource ImageOriginY}}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource AspectioRatioImage}}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor={StaticResource AspectioRatioImage}}" />
+                Margin="{StaticResource ImageMargin}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Source="{Binding ImageName}"  
+                Aspect="AspectFill" />
             <WMSControls:WMSEntry x:Name="txtEntry"
+                Grid.Column="1"      
+                Margin="{StaticResource FieldMargin}"                
                 Placeholder="{Binding PlaceHolderText}"
                 BackgroundColor="Transparent"
                 Text="{Binding TitleText}"
-                IsPassword="{Binding IsSecureTextEntry}"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.21}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.78}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}" />
-        </RelativeLayout>
+                IsPassword="{Binding IsSecureTextEntry}" />
+        </Grid>
     </Base:BaseContentView.Content>
     <Base:BaseContentView.Resources>
         <ResourceDictionary>
-            <OnIdiom x:Key="AspectioRatioImage"
-                x:TypeArguments="x:Double"
-                Phone="0.13"
-                Tablet="0.11" />
-            <OnIdiom x:Key="ImageOriginX"
-                x:TypeArguments="x:Double"
-                Phone="0.04"
-                Tablet="0.05" />         
-            <OnIdiom x:Key="ImageOriginY"
-                x:TypeArguments="x:Double"
-                Phone="0.15"
-                Tablet="0.1" />             
+            <OnIdiom x:Key="FieldMargin" x:TypeArguments="Thickness" Phone="5,0,0,0" Tablet="15,0,0,0" />            
+            <OnIdiom x:Key="ImageMargin" x:TypeArguments="Thickness" Phone="15,10,10,10" Tablet="25,10,10,10" />                        
         </ResourceDictionary>
-    </Base:BaseContentView.Resources>
+    </Base:BaseContentView.Resources>    
 </Base:BaseContentView>

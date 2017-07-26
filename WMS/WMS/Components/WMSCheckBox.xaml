@@ -8,15 +8,7 @@
     x:Class="WMS.Components.WMSCheckBox">
     <Base:BaseContentView.Content>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <StackLayout Orientation="Horizontal"
-                Grid.Row="0"
-                Grid.Column="0">
+            <StackLayout Orientation="Horizontal">
                 <WMSControls:WMSImage x:Name="chkBox"
                     Source="checked"
                     WidthRequest="25">

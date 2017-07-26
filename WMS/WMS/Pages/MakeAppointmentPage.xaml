@@ -13,31 +13,31 @@
             <WMSComponents:WMSHeaderUI x:Name="LogoView"
                 TitleText="MAKE AN APPOINTMENT"
                 HorizontalOptions="FillAndExpand"
+                DescriptionMarginFactor="0.2"
                 YAlignDescription="End"
                 HeightRequest="{StaticResource LogoBannerHeight}" />
             <ScrollView>
                 <StackLayout Spacing="12"
-                    Margin="20,0,20,0">
-                    <BoxView HeightRequest="5" />
+                    Margin="20,15,20,0">
                     <WMSComponents:WMSEntryUI2 x:Name="txtName"
                         PlaceHolderText="Name"
-                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        HeightRequest="{StaticResource ElementStandardHeightConstant}"
                         ExternalDataBindingPropertyName="Name" />
                     <WMSComponents:WMSEntryUI2 x:Name="txtContactNo"
                         PlaceHolderText="Contact No. (92-3XX-XXXXXXX)"
-                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        HeightRequest="{StaticResource ElementStandardHeightConstant}"
                         ExternalDataBindingPropertyName="ContactNo" />
                     <WMSComponents:WMSEntryUI2 x:Name="txtEmaillAddress"
                         PlaceHolderText="Email Address"
-                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        HeightRequest="{StaticResource ElementStandardHeightConstant}"
                         ExternalDataBindingPropertyName="EmailAddress" />
                     <WMSComponents:WMSEntryUI2 x:Name="txtCountry"
                         PlaceHolderText="Country"
-                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        HeightRequest="{StaticResource ElementStandardHeightConstant}"
                         ExternalDataBindingPropertyName="Country" />
                     <WMSComponents:WMSEntryUI2 x:Name="txtCity"
                         PlaceHolderText="City"
-                        HeightRequest="{StaticResource TextFieldHeightConstant}"
+                        HeightRequest="{StaticResource ElementStandardHeightConstant}"
                         ExternalDataBindingPropertyName="City" />
                     <WMSControls:WMSLabel x:Name="lblSelectDateTime"
                         Text="{StaticResource SelectDateTimeText}" />
@@ -80,14 +80,14 @@
                             Command="{Binding OnSubmit_Clicked}"
                             Style="{StaticResource WMSButtonStyle}"
                             HorizontalOptions="FillAndExpand"
-                            HeightRequest="{StaticResource TextFieldHeightConstant}">
+                            HeightRequest="{StaticResource ElementStandardHeightConstant}">
                         </WMSControls:WMSButton>
                         <WMSControls:WMSButton x:Name="btnCancel"
                             Text="Cancel"
                             Clicked="Cancel_Clicked"
                             Style="{StaticResource WMSButtonStyle}"
                             HorizontalOptions="FillAndExpand"
-                            HeightRequest="{StaticResource TextFieldHeightConstant}">
+                            HeightRequest="{StaticResource ElementStandardHeightConstant}">
                         </WMSControls:WMSButton>
                     </StackLayout>
                     <WMSComponents:WMSDYKUI x:Name="viewDidYouKnow">
@@ -101,8 +101,8 @@
             <x:String x:Key="SelectDateTimeText">Please select preferred date and time according to Pakistan Standard Time</x:String>
             <x:String x:Key="ContactedKeyText">How would you like to be contacted?</x:String>
             <x:String x:Key="HearAboutUsText">How/Where did you hear about us?</x:String>    
-            <OnIdiom x:Key="TextFieldHeightConstant" x:TypeArguments="x:Double" Phone="50" Tablet="70" />               
-            <OnIdiom x:Key="LogoBannerHeight" x:TypeArguments="x:Double" Phone="100" Tablet="150" />   
+            <OnIdiom x:Key="ElementStandardHeightConstant" x:TypeArguments="x:Double" Phone="50" Tablet="70" />               
+            <OnIdiom x:Key="LogoBannerHeight" x:TypeArguments="x:Double" Phone="100" Tablet="200" />   
             <OnIdiom x:Key="RemarksHeight" x:TypeArguments="x:Double" Phone="100" Tablet="200" />               
         </ResourceDictionary>
     </Base:BaseContentPage.Resources>

@@ -3,53 +3,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
     xmlns:WMSUtils="clr-namespace:WMS.Utils;assembly=WMS"
-    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"        
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
     x:Class="WMS.Components.WMSHeaderUI">
     <Base:BaseContentView.Content>
-        <RelativeLayout VerticalOptions="FillAndExpand"
-            BackgroundColor="White"
-            RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
-            RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}">
-            <BoxView x:Name="BoxView"
-                Color="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}"
-                BackgroundColor="Aqua"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1.0}" />
+        <Grid BackgroundColor="{x:Static WMSUtils:WMSTheme.BackgroundBlueColor}">
             <WMSControls:WMSLabel x:Name="lblDescription"
                 Text="{Binding TitleText}"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, ElementName=BoxView, Constant=0}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y, ElementName=BoxView, Constant=0}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={StaticResource DescRatio}}"
+                Margin="{Binding Margin}"
                 TextColor="White"
                 Font="{x:Static WMSUtils:WMSTheme.FontName}"
                 FontSize="{Binding DescriptionFontSize}"
                 XAlign="Center"
                 YAlign="{Binding YAlignDescription}"
                 FontAttributes="Bold" />
-            <WMSControls:WMSLabel x:Name="lblSubDescription"
-                Text="{Binding TitleText}"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, Property=X, ElementName=BoxView, Constant=0}"
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, Property=Y, ElementName=BoxView, Constant=0}"
-                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1.0}"
-                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor={StaticResource DescRatioPadded}}"
-                TextColor="White"
-                IsVisible="false"
-                Font="{x:Static WMSUtils:WMSTheme.FontName}"
-                FontSize="{Binding DescriptionFontSize}"
-                XAlign="Center"
-                YAlign="{Binding YAlignDescription}"
-                FontAttributes="Bold" />            
-        </RelativeLayout>
+        </Grid>
     </Base:BaseContentView.Content>
     <Base:BaseContentView.Resources>
-        <ResourceDictionary>
-            <x:Double x:Key="DescRatio">1.0</x:Double> 
-            <x:Double x:Key="DescRatioPadded">0.8</x:Double>             
-        </ResourceDictionary>
     </Base:BaseContentView.Resources>
 </Base:BaseContentView>

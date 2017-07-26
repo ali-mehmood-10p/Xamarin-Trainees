@@ -23,7 +23,10 @@ namespace WMS.Components
         public static readonly BindableProperty YAlignDescriptionProperty = BindableProperty.Create("YAlignDescription", typeof(TextAlignment), typeof(TextAlignment), TextAlignment.Center);
 		public TextAlignment YAlignDescription
 		{
-			get { return (TextAlignment)GetValue(YAlignDescriptionProperty); }
+			get 
+            {             
+                return (TextAlignment)GetValue(YAlignDescriptionProperty); 
+            }
 			set
 			{
 				SetValue(YAlignDescriptionProperty, value);
@@ -31,21 +34,24 @@ namespace WMS.Components
 			}
 		}
 
-        public static readonly BindableProperty DescriptionSpaceRatioProperty = BindableProperty.Create("DescriptionSpaceRatio", typeof(double), typeof(double), (double)0.0);
-		public double DescriptionSpaceRatio
+        public static readonly BindableProperty DescriptionMarginFactorProperty = BindableProperty.Create("DescriptionMarginFactor", typeof(double), typeof(double), (double)0.0);
+        public double DescriptionMarginFactor
 		{
-			get { return (double)GetValue(DescriptionSpaceRatioProperty); }
+			get
+			{
+				return (double)GetValue(DescriptionMarginFactorProperty);
+			}
 			set
 			{
-                SetValue(DescriptionSpaceRatioProperty, value);
-            }
+				SetValue(DescriptionMarginFactorProperty, value);
+				lblDescription.Margin = new Thickness(0, 0, 0, this.Bounds.Size.Height * value);
+			}
 		}
 
         public void AdjustUIForSubHeader()
         {
-            lblDescription.IsVisible = false;
-            lblSubDescription.IsVisible = true;
-        }
+
+		}
 
 		public WMSHeaderUI()
 		{

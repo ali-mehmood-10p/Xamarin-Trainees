@@ -41,7 +41,7 @@
                         ExternalDataBindingPropertyName="City" />
                     <WMSControls:WMSLabel x:Name="lblSelectDateTime"
                         Text="{StaticResource SelectDateTimeText}" />
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" Margin="0,10,0,10">
                         <WMSComponents:WMSRadioButton x:Name="rdEmail"
                             SelectedImageName="radio_sprite_selected"
                             UnSelectedImageName="radio_sprite_unselected"
@@ -49,7 +49,6 @@
                             GroupID="HowToContact"
                             HorizontalOptions="FillAndExpand">
                         </WMSComponents:WMSRadioButton>
-                        <BoxView WidthRequest="10" />
                         <WMSComponents:WMSRadioButton x:Name="rdCall"
                             SelectedImageName="radio_sprite_selected"
                             UnSelectedImageName="radio_sprite_unselected"
@@ -75,8 +74,7 @@
                         Placeholder="Remarks (if any)"
                         HeightRequest="{StaticResource RemarksHeight}">
                     </WMSControls:WMSEditor>
-                    <StackLayout Orientation="Horizontal">
-                        <BoxView WidthRequest="30" />
+                    <StackLayout Orientation="Horizontal" Margin="30,10,30,40" Spacing="20">
                         <WMSControls:WMSButton x:Name="btnSubmit"
                             Text="Submit"
                             Command="{Binding OnSubmit_Clicked}"
@@ -84,7 +82,6 @@
                             HorizontalOptions="FillAndExpand"
                             HeightRequest="{StaticResource TextFieldHeightConstant}">
                         </WMSControls:WMSButton>
-                        <BoxView WidthRequest="20" />
                         <WMSControls:WMSButton x:Name="btnCancel"
                             Text="Cancel"
                             Clicked="Cancel_Clicked"
@@ -92,9 +89,7 @@
                             HorizontalOptions="FillAndExpand"
                             HeightRequest="{StaticResource TextFieldHeightConstant}">
                         </WMSControls:WMSButton>
-                        <BoxView WidthRequest="30" />
                     </StackLayout>
-                    <BoxView HeightRequest="10" />
                     <WMSComponents:WMSDYKUI x:Name="viewDidYouKnow">
                     </WMSComponents:WMSDYKUI>
                 </StackLayout>

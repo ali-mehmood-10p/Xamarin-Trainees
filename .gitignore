@@ -4,5 +4,5 @@
 *.g.cs
 *.txt
 *.cache
-*/bin/Debug
-*/obj/Debug
+*/bin/
+*/obj/

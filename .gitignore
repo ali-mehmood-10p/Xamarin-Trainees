@@ -1,0 +1,7 @@
+*.pdb
+*.dll
+*.exe
+*.txt
+bin/
+obj/
+WMS/packages/

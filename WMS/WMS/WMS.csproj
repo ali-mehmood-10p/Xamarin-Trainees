@@ -32,6 +32,30 @@
     <EmbeddedResource Include="Views\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\BaseContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WMSRadioButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WMSGroup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RedemptionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BaseContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WMSGroupHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WMSRedemptionDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WMSTypeOfScheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>        
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -47,6 +71,43 @@
     <Compile Include="Controls\TransparentEntry.cs" />
     <Compile Include="Controls\CustomFrame.cs" />
     <Compile Include="Controls\TransparentButton.cs" />
+    <Compile Include="Interfaces\IWMSPageAction.cs" />
+    <Compile Include="Interfaces\IWMSExternalNotifyPropertyChange.cs" />
+    <Compile Include="Utils\WMSFieldValidator.cs" />
+    <Compile Include="Utils\WMSRadioButtonsGroupManager.cs" />
+    <Compile Include="Controls\WMSButton.cs" />
+    <Compile Include="Controls\WMSDatePicker.cs" />
+    <Compile Include="Controls\WMSEditor.cs" />
+    <Compile Include="Controls\WMSEntry.cs" />
+    <Compile Include="Controls\WMSGrid.cs" />
+    <Compile Include="Controls\WMSImage.cs" />
+    <Compile Include="Controls\WMSLabel.cs" />
+    <Compile Include="Controls\WMSPicker.cs" />
+    <Compile Include="Controls\WMSTimePicker.cs" />
+    <Compile Include="Components\BaseContentView.xaml.cs">
+      <DependentUpon>BaseContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WMSRadioButton.xaml.cs">
+      <DependentUpon>WMSRadioButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WMSGroup.xaml.cs">
+      <DependentUpon>WMSGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RedemptionPage.xaml.cs">
+      <DependentUpon>RedemptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BaseContentPage.xaml.cs">
+      <DependentUpon>BaseContentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WMSGroupHeader.xaml.cs">
+      <DependentUpon>WMSGroupHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WMSRedemptionDetails.xaml.cs">
+      <DependentUpon>WMSRedemptionDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\WMSTypeOfScheme.xaml.cs">
+      <DependentUpon>WMSTypeOfScheme.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -67,6 +128,8 @@
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Controls\" />
+    <Folder Include="Components\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

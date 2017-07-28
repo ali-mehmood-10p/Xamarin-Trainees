@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    x:Class="WMS.Components.WMSRedemptionDetails">
+    <Base:BaseContentView.Content>
+        <StackLayout Spacing="0">
+            <WMSControls:WMSLabel Text="How would you like to define your withdrawal reqeust ?">
+            </WMSControls:WMSLabel>
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,20">
+                <WMSComponents:WMSRadioButton TitleText="Mutual Funds" HorizontalOptions="FillAndExpand">
+                </WMSComponents:WMSRadioButton>
+                <WMSComponents:WMSRadioButton TitleText="Investment Plans" HorizontalOptions="FillAndExpand">
+                </WMSComponents:WMSRadioButton>
+                <WMSComponents:WMSRadioButton TitleText="Mututal Funds and Investment Plans" HorizontalOptions="FillAndExpand">
+                </WMSComponents:WMSRadioButton>
+            </StackLayout>
+            <WMSControls:WMSPicker Title="Withdrawal From" HeightRequest="{StaticResource DropDownHeightConstant}" Margin="0,0,0,20">
+            </WMSControls:WMSPicker>
+            <WMSControls:WMSPicker Title="Select Scheme Code" HeightRequest="{StaticResource DropDownHeightConstant}" Margin="0,0,0,20">
+            </WMSControls:WMSPicker>   
+            <WMSControls:WMSLabel Text="Cut off time: N/A" />
+            <WMSControls:WMSLabel Text="Cut off time: N/A" />
+            <WMSControls:WMSLabel Text="Cut off time: N/A" />
+            <WMSControls:WMSLabel Text="Cut off time: N/A" />            
+        </StackLayout>
+    </Base:BaseContentView.Content>
+    <Base:BaseContentView.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="DropDownHeightConstant">40</x:Double>
+        </ResourceDictionary>
+    </Base:BaseContentView.Resources>
+</Base:BaseContentView>

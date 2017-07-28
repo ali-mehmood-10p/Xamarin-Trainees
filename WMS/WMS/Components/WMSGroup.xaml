@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMSControls:WMSGrid xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:WMSUtils="clr-namespace:WMS.Utils;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:local="clr-namespace:WMS;assembly:WMS"
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
+    x:Class="WMS.Components.WMSGroup">
+    <StackLayout BackgroundColor="{x:Static local:Colors.GroupHeaderColor}">
+        <WMSComponents:WMSGroupHeader>
+        </WMSComponents:WMSGroupHeader>
+        <ContentView x:Name="ContentTemplate"
+            BackgroundColor="{x:Static local:Colors.GroupBackgroundColor}"
+            VerticalOptions="FillAndExpand">            
+        </ContentView>       
+    </StackLayout>    
+</WMSControls:WMSGrid>

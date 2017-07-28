@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using WMS.Views;
 
 namespace WMS
 {
@@ -8,7 +9,11 @@ namespace WMS
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            NavigationPage navPage = new NavigationPage(new RedemptionPage());
+            navPage.BarBackgroundColor = Color.FromHex(Colors.PrimaryColor);
+            navPage.BarTextColor = Color.White;
+
+            MainPage = navPage;
         }
 
         protected override void OnStart()

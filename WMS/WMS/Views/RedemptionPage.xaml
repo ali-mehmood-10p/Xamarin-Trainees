@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Base="clr-namespace:WMS.Views;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    x:Class="WMS.Views.RedemptionPage">
+    <Base:BaseContentPage.Content>
+        <StackLayout Spacing="20">
+        <WMSComponents:WMSGroup x:Name="vwTypeOfView">
+                <WMSComponents:WMSTypeOfScheme Style="{StaticResource ContentViewGroupContentStyle}">
+                </WMSComponents:WMSTypeOfScheme>
+            </WMSComponents:WMSGroup>
+            <WMSComponents:WMSGroup x:Name="vwRedemptionDetails">
+                <WMSComponents:WMSRedemptionDetails Style="{StaticResource ContentViewGroupContentStyle}">
+                </WMSComponents:WMSRedemptionDetails>
+            </WMSComponents:WMSGroup>
+        </StackLayout>
+    </Base:BaseContentPage.Content>
+</Base:BaseContentPage>

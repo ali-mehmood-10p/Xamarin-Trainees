@@ -1,6 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WMS.App">
-	<Application.Resources>
-		<!-- Application resource dictionary -->
-	</Application.Resources>
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WMS.App">
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Style x:Key="ContentViewGroupContentStyle"
+                TargetType="ContentView">
+                <Setter Property="Margin"
+                    Value="15,70,15,30" />
+            </Style>
+            <OnIdiom x:Key="GroupHeaderHeight"
+                x:TypeArguments="x:Double"
+                Phone="50"
+                Tablet="70">
+            </OnIdiom>
+            <OnIdiom x:Key="GroupContentLeftMargin"
+                x:TypeArguments="x:Double"
+                Phone="50"
+                Tablet="70">
+            </OnIdiom>
+            <OnPlatform x:Key="GroupContentMargin"
+                x:TypeArguments="Thickness"
+                iOS="3,0,3,3"
+                Android="3,0,3,3" />           
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

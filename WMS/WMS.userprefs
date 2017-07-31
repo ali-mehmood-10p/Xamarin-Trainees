@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{60CB1541-C564-48EC-8C6D-13302911BD89}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="WMS/Views/RedemptionPage.xaml">
     <Files>
-      <File FileName="WMS/Views/RedemptionPage.xaml" Line="10" Column="19" />
+      <File FileName="WMS/Views/RedemptionPage.xaml" Line="11" Column="26" />
+      <File FileName="WMS/Components/WMSRedemptionHeader.xaml" Line="16" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

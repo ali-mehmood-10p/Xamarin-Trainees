@@ -15,6 +15,7 @@ namespace WMS.Views
             Title = "REQUEST FOR REDEMPTION";
 
             BindingContext = this;
+
         }
     }
 }

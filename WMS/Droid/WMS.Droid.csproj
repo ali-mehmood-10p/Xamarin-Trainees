@@ -145,6 +145,20 @@
     <AndroidResource Include="Resources\drawable-xhdpi\radio_sprite_unselected.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\radio_sprite_selected.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\radio_sprite_unselected.png" />
+    <AndroidResource Include="Resources\drawable\arrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\arrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\user_pic.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\password.png" />
+    <AndroidResource Include="Resources\drawable\account_time_bar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\account_time_bar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\account_time_bar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\account_time_bar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\user_pic.png" />
+    <AndroidResource Include="Resources\drawable\user_pic.png" />
+    <AndroidResource Include="Resources\drawable\password.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\password.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />

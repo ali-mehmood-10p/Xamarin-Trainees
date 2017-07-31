@@ -4,27 +4,38 @@
     xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
     xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
     xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:local="clr-namespace:WMS;assembly:WMS"    
     x:Class="WMS.Components.WMSRedemptionDetails">
     <Base:BaseContentView.Content>
         <StackLayout Spacing="0">
             <WMSControls:WMSLabel Text="How would you like to define your withdrawal reqeust ?">
             </WMSControls:WMSLabel>
-            <StackLayout Orientation="Horizontal" Margin="0,20,0,20">
-                <WMSComponents:WMSRadioButton TitleText="Mutual Funds" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal"
+                Margin="0,20,0,20">
+                <WMSComponents:WMSRadioButton TitleText="Amount"
+                    HorizontalOptions="FillAndExpand">
                 </WMSComponents:WMSRadioButton>
-                <WMSComponents:WMSRadioButton TitleText="Investment Plans" HorizontalOptions="FillAndExpand">
+                <WMSComponents:WMSRadioButton TitleText="Percentage"
+                    HorizontalOptions="FillAndExpand">
                 </WMSComponents:WMSRadioButton>
-                <WMSComponents:WMSRadioButton TitleText="Mututal Funds and Investment Plans" HorizontalOptions="FillAndExpand">
+                <WMSComponents:WMSRadioButton TitleText="Units"
+                    HorizontalOptions="FillAndExpand">
                 </WMSComponents:WMSRadioButton>
             </StackLayout>
-            <WMSControls:WMSPicker Title="Withdrawal From" HeightRequest="{StaticResource DropDownHeightConstant}" Margin="0,0,0,20">
+            <WMSControls:WMSGrid Margin="0,0,0,20" RowSpacing="0" ColumnSpacing="0">
+                <BoxView BackgroundColor="{x:Static local:Colors.WithDrawalFromBGColor}" />
+                <WMSControls:WMSLabel Text="Withdrawal From" Margin="10,0,0,0" HeightRequest="{StaticResource DropDownHeightConstant}" VerticalTextAlignment="Center" />
+            </WMSControls:WMSGrid>
+            <WMSControls:WMSPicker Title="Select Scheme Code"
+                HeightRequest="{StaticResource DropDownHeightConstant}"
+                Margin="0,0,0,20">
             </WMSControls:WMSPicker>
-            <WMSControls:WMSPicker Title="Select Scheme Code" HeightRequest="{StaticResource DropDownHeightConstant}" Margin="0,0,0,20">
-            </WMSControls:WMSPicker>   
-            <WMSControls:WMSLabel Text="Cut off time: N/A" />
-            <WMSControls:WMSLabel Text="Cut off time: N/A" />
-            <WMSControls:WMSLabel Text="Cut off time: N/A" />
-            <WMSControls:WMSLabel Text="Cut off time: N/A" />            
+            <WMSControls:WMSLabel Text="Cut off time: N/A"
+                FontSize="12" />
+            <WMSControls:WMSLabel Text="Total Units: N/A"
+                FontSize="12" />
+            <WMSControls:WMSLabel Text="Investment Amount: N/A"
+                FontSize="12" />
         </StackLayout>
     </Base:BaseContentView.Content>
     <Base:BaseContentView.Resources>

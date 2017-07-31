@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    x:Class="WMS.Components.WMSRedemptionHeader">
+    <Base:BaseContentView.Content>
+        <WMSControls:WMSGrid BackgroundColor="Blue">
+            <StackLayout BackgroundColor="Fuchsia">
+                <WMSControls:WMSImage Source="account_time_bar"
+                    VerticalOptions="StartAndExpand" />
+            </StackLayout>
+        </WMSControls:WMSGrid>
+    </Base:BaseContentView.Content>
+</Base:BaseContentView>

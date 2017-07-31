@@ -8,11 +8,11 @@
     xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
     x:Class="WMS.Components.WMSGroup">
     <StackLayout BackgroundColor="{x:Static local:Colors.GroupHeaderColor}">
-        <WMSComponents:WMSGroupHeader>
+        <WMSComponents:WMSGroupHeader x:Name="vwHeader" HeaderTitle="{Binding HeaderTitle}">
         </WMSComponents:WMSGroupHeader>
-        <ContentView x:Name="ContentTemplate"
+        <BoxView x:Name="boxView"
             BackgroundColor="{x:Static local:Colors.GroupBackgroundColor}"
             VerticalOptions="FillAndExpand">            
-        </ContentView>       
+        </BoxView>       
     </StackLayout>    
 </WMSControls:WMSGrid>

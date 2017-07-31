@@ -159,6 +159,10 @@
     <AndroidResource Include="Resources\drawable\user_pic.png" />
     <AndroidResource Include="Resources\drawable\password.png" />
     <AndroidResource Include="Resources\drawable-hdpi\password.png" />
+    <AndroidResource Include="Resources\drawable\clock.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\clock.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />

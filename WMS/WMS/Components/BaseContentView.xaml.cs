@@ -59,7 +59,7 @@ namespace WMS.Components
 			BindingContext = this;
 		}
 
-		public void PostUpdatesToDataBinding(object propertyValue)
+		public virtual void PostUpdatesToDataBinding(object propertyValue)
 		{
 			if (ExternalDataBinding != null)
 			{

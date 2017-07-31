@@ -6,11 +6,56 @@
     xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
     x:Class="WMS.Components.WMSRedemptionHeader">
     <Base:BaseContentView.Content>
-        <WMSControls:WMSGrid BackgroundColor="Blue">
-            <StackLayout BackgroundColor="Fuchsia">
-                <WMSControls:WMSImage Source="account_time_bar"
-                    VerticalOptions="StartAndExpand" />
+        <WMSControls:WMSGrid>
+            <WMSControls:WMSGrid.ColumnDefinitions>
+                <ColumnDefinition Width="4.75*" />
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="4.75*" />
+            </WMSControls:WMSGrid.ColumnDefinitions>
+            <WMSControls:WMSGrid.RowDefinitions>
+                <RowDefinition Height="43" />
+            </WMSControls:WMSGrid.RowDefinitions>
+            <WMSControls:WMSImage Source="account_time_bar"
+                Aspect="AspectFill"
+                Grid.ColumnSpan="3" />
+            <BoxView BackgroundColor="Black"
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                WidthRequest="2"
+                Margin="0,8" />
+            <!--Left Column Elements-->
+            <StackLayout Orientation="Horizontal"
+                Padding="5"
+                Grid.Column="0">
+                <WMSControls:WMSLabel x:Name="txtAccountID"
+                    Text="{Binding AccountID, StringFormat='Account ID : {0}'}"
+                    FontSize="12"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <!--Right Column Elements-->
+            <StackLayout Orientation="Horizontal"
+                Padding="5"
+                Grid.Column="2">
+                <WMSControls:WMSImage Source="clock"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    Aspect="AspectFit"
+                    WidthRequest="25"
+                    HeightRequest="25" />
+                <WMSControls:WMSLabel x:Name="txtTime"
+                    Text="{Binding TimeString, StringFormat='Time : {0}'}"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="12"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Start" />
             </StackLayout>
         </WMSControls:WMSGrid>
     </Base:BaseContentView.Content>
+    <Base:BaseContentView.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </Base:BaseContentView.Resources>
 </Base:BaseContentView>

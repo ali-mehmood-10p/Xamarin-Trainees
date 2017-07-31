@@ -6,11 +6,23 @@
     xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
     x:Class="WMS.Components.WMSTypeOfScheme">
     <StackLayout Spacing="20">
-        <WMSComponents:WMSRadioButton TitleText="Mutual Funds">
+        <WMSComponents:WMSRadioButton x:Name="rdMutualFunds"
+            TitleText="Mutual Funds"
+            SelectedImageName="radio_sprite_selected"
+            UnSelectedImageName="radio_sprite_unselected"
+            GroupID="TypeOfScheme">
         </WMSComponents:WMSRadioButton>
-        <WMSComponents:WMSRadioButton TitleText="Investment Plans">
+        <WMSComponents:WMSRadioButton x:Name="rdInvestmentPlans"
+            TitleText="Investment Plans"
+            SelectedImageName="radio_sprite_selected"
+            UnSelectedImageName="radio_sprite_unselected"
+            GroupID="TypeOfScheme">
         </WMSComponents:WMSRadioButton>
-        <WMSComponents:WMSRadioButton TitleText="Mututal Funds and Investment Plans">
-        </WMSComponents:WMSRadioButton>        
+        <WMSComponents:WMSRadioButton x:Name="rdMutalAndInvestments"
+            TitleText="Mututal Funds and Investment Plans"
+            SelectedImageName="radio_sprite_selected"
+            UnSelectedImageName="radio_sprite_unselected"
+            GroupID="TypeOfScheme">
+        </WMSComponents:WMSRadioButton>
     </StackLayout>
 </Base:BaseContentView>

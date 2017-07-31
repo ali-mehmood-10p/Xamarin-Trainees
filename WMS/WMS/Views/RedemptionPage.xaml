@@ -6,23 +6,23 @@
     xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
     x:Class="WMS.Views.RedemptionPage">
     <Base:BaseContentPage.Content>
-        <ScrollView>
-            <StackLayout Spacing="10">
-                <WMSComponents:WMSRedemptionHeader HeightRequest="33" />
+        <StackLayout Spacing="0">
+            <WMSComponents:WMSRedemptionHeader x:Name="vwHeader" />
+            <ScrollView>
                 <StackLayout Spacing="20"
-                    Margin="15,0,15,0">
-                    <WMSComponents:WMSGroup x:Name="vwTypeOfView"
-                        HeaderTitle="Select Types Of Scheme">
-                        <WMSComponents:WMSTypeOfScheme Style="{StaticResource ContentViewGroupContentStyle}">
+                    Margin="15,10,15,0">
+                    <WMSComponents:WMSGroup HeaderTitle="Select Types Of Scheme">
+                        <WMSComponents:WMSTypeOfScheme x:Name="vwTypeOfScheme"
+                            Style="{StaticResource ContentViewGroupContentStyle}">
                         </WMSComponents:WMSTypeOfScheme>
                     </WMSComponents:WMSGroup>
-                    <WMSComponents:WMSGroup x:Name="vwRedemptionDetails"
-                        HeaderTitle="Select Types Of Scheme">
-                        <WMSComponents:WMSRedemptionDetails Style="{StaticResource ContentViewGroupContentStyle}">
+                    <WMSComponents:WMSGroup HeaderTitle="Select Types Of Scheme">
+                        <WMSComponents:WMSRedemptionDetails x:Name="vwRedemptionDetails"
+                            Style="{StaticResource ContentViewGroupContentStyle}">
                         </WMSComponents:WMSRedemptionDetails>
                     </WMSComponents:WMSGroup>
                 </StackLayout>
-            </StackLayout>
-        </ScrollView>
+            </ScrollView>
+        </StackLayout>
     </Base:BaseContentPage.Content>
 </Base:BaseContentPage>

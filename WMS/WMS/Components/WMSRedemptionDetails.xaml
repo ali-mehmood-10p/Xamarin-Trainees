@@ -4,7 +4,7 @@
     xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
     xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
     xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
-    xmlns:local="clr-namespace:WMS;assembly:WMS"    
+    xmlns:local="clr-namespace:WMS;assembly:WMS"
     x:Class="WMS.Components.WMSRedemptionDetails">
     <Base:BaseContentView.Content>
         <StackLayout Spacing="0">
@@ -12,19 +12,30 @@
             </WMSControls:WMSLabel>
             <StackLayout Orientation="Horizontal"
                 Margin="0,20,0,20">
-                <WMSComponents:WMSRadioButton TitleText="Amount"
-                    HorizontalOptions="FillAndExpand">
-                </WMSComponents:WMSRadioButton>
-                <WMSComponents:WMSRadioButton TitleText="Percentage"
-                    HorizontalOptions="FillAndExpand">
-                </WMSComponents:WMSRadioButton>
-                <WMSComponents:WMSRadioButton TitleText="Units"
-                    HorizontalOptions="FillAndExpand">
-                </WMSComponents:WMSRadioButton>
+                <WMSComponents:WMSRadioButton x:Name="rdAmount" TitleText="Amount"
+                    SelectedImageName="radio_sprite_selected"
+                    UnSelectedImageName="radio_sprite_unselected"                    
+                    HorizontalOptions="FillAndExpand"
+                    GroupID="RedemptionDetails" />
+                <WMSComponents:WMSRadioButton x:Name="rdPercentage" TitleText="Percentage"
+                    SelectedImageName="radio_sprite_selected"
+                    UnSelectedImageName="radio_sprite_unselected"                     
+                    HorizontalOptions="FillAndExpand"
+                    GroupID="RedemptionDetails" />
+                <WMSComponents:WMSRadioButton x:Name="rdUnits" TitleText="Units"
+                    SelectedImageName="radio_sprite_selected"
+                    UnSelectedImageName="radio_sprite_unselected"
+                    HorizontalOptions="FillAndExpand"
+                    GroupID="RedemptionDetails" />
             </StackLayout>
-            <WMSControls:WMSGrid Margin="0,0,0,20" RowSpacing="0" ColumnSpacing="0">
+            <WMSControls:WMSGrid Margin="0,0,0,20"
+                RowSpacing="0"
+                ColumnSpacing="0">
                 <BoxView BackgroundColor="{x:Static local:Colors.WithDrawalFromBGColor}" />
-                <WMSControls:WMSLabel Text="Withdrawal From" Margin="10,0,0,0" HeightRequest="{StaticResource DropDownHeightConstant}" VerticalTextAlignment="Center" />
+                <WMSControls:WMSLabel Text="Withdrawal From"
+                    Margin="10,0,0,0"
+                    HeightRequest="{StaticResource DropDownHeightConstant}"
+                    VerticalTextAlignment="Center" />
             </WMSControls:WMSGrid>
             <WMSControls:WMSPicker Title="Select Scheme Code"
                 HeightRequest="{StaticResource DropDownHeightConstant}"

@@ -114,6 +114,7 @@
     <Compile Include="Components\WMSRedemptionHeader.xaml.cs">
       <DependentUpon>WMSRedemptionHeader.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\RedemptionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

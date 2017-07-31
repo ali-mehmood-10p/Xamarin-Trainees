@@ -10,9 +10,8 @@
     <StackLayout BackgroundColor="{x:Static local:Colors.GroupHeaderColor}">
         <WMSComponents:WMSGroupHeader x:Name="vwHeader" HeaderTitle="{Binding HeaderTitle}">
         </WMSComponents:WMSGroupHeader>
-        <BoxView x:Name="boxView"
+        <BoxView x:Name="boxView" Margin="1"
             BackgroundColor="{x:Static local:Colors.GroupBackgroundColor}"
-            VerticalOptions="FillAndExpand">            
-        </BoxView>       
+            VerticalOptions="FillAndExpand" />       
     </StackLayout>    
 </WMSControls:WMSGrid>

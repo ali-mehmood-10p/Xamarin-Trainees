@@ -59,6 +59,12 @@
     <EmbeddedResource Include="Components\WMSRedemptionHeader.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\WMSPaymentDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\WMSAccessory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -115,6 +121,13 @@
       <DependentUpon>WMSRedemptionHeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\RedemptionViewModel.cs" />
+    <Compile Include="Components\WMSPaymentDetails.xaml.cs">
+      <DependentUpon>WMSPaymentDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IScheme.cs" />
+    <Compile Include="Components\WMSAccessory.xaml.cs">
+      <DependentUpon>WMSAccessory.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

@@ -21,8 +21,40 @@
                             Style="{StaticResource ContentViewGroupContentStyle}">
                         </WMSComponents:WMSRedemptionDetails>
                     </WMSComponents:WMSGroup>
+                    <WMSComponents:WMSGroup HeaderTitle="Payment Details">
+                        <WMSComponents:WMSPaymentDetails x:Name="vwPaymentDetails"
+                            Style="{StaticResource ContentViewGroupContentStyle}">
+                        </WMSComponents:WMSPaymentDetails>
+                    </WMSComponents:WMSGroup>
+                    <Grid Margin="30,20,30,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4.75*" />
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="4.75*" />
+                        </Grid.ColumnDefinitions>
+                        <WMSControls:WMSButton Text="Proceed"
+                            Style="{StaticResource WMSButtonStyle}"
+                            FontSize="{StaticResource SchemeButtonFontSize}"
+                            Clicked="btnProceed_Clicked" />
+                        <WMSControls:WMSButton Text="Cancel"
+                            Style="{StaticResource WMSButtonStyle}"
+                            Grid.Column="2"
+                            FontSize="{StaticResource SchemeButtonFontSize}"
+                            Clicked="btnCancel_Clicked" />
+                    </Grid>
                 </StackLayout>
             </ScrollView>
         </StackLayout>
     </Base:BaseContentPage.Content>
+    <Base:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <OnIdiom x:Key="SchemeButtonFontSize"
+                x:TypeArguments="x:Double"
+                Phone="10"
+                Tablet="14" />            
+        </ResourceDictionary>
+    </Base:BaseContentPage.Resources>    
 </Base:BaseContentPage>

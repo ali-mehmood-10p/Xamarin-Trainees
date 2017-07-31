@@ -12,17 +12,20 @@
             </WMSControls:WMSLabel>
             <StackLayout Orientation="Horizontal"
                 Margin="0,20,0,20">
-                <WMSComponents:WMSRadioButton x:Name="rdAmount" TitleText="Amount"
+                <WMSComponents:WMSRadioButton x:Name="rdAmount"
+                    TitleText="Amount"
                     SelectedImageName="radio_sprite_selected"
-                    UnSelectedImageName="radio_sprite_unselected"                    
+                    UnSelectedImageName="radio_sprite_unselected"
                     HorizontalOptions="FillAndExpand"
                     GroupID="RedemptionDetails" />
-                <WMSComponents:WMSRadioButton x:Name="rdPercentage" TitleText="Percentage"
+                <WMSComponents:WMSRadioButton x:Name="rdPercentage"
+                    TitleText="Percentage"
                     SelectedImageName="radio_sprite_selected"
-                    UnSelectedImageName="radio_sprite_unselected"                     
+                    UnSelectedImageName="radio_sprite_unselected"
                     HorizontalOptions="FillAndExpand"
                     GroupID="RedemptionDetails" />
-                <WMSComponents:WMSRadioButton x:Name="rdUnits" TitleText="Units"
+                <WMSComponents:WMSRadioButton x:Name="rdUnits"
+                    TitleText="Units"
                     SelectedImageName="radio_sprite_selected"
                     UnSelectedImageName="radio_sprite_unselected"
                     HorizontalOptions="FillAndExpand"
@@ -38,20 +41,44 @@
                     VerticalTextAlignment="Center" />
             </WMSControls:WMSGrid>
             <WMSControls:WMSPicker Title="Select Scheme Code"
+                ItemsSource="{Binding SourceCollection}"
                 HeightRequest="{StaticResource DropDownHeightConstant}"
                 Margin="0,0,0,20">
             </WMSControls:WMSPicker>
-            <WMSControls:WMSLabel Text="Cut off time: N/A"
+            <WMSControls:WMSLabel Text="{Binding CutOffTime, StringFormat='Cut off time : {0}'}"
                 FontSize="12" />
-            <WMSControls:WMSLabel Text="Total Units: N/A"
+            <WMSControls:WMSLabel Text="{Binding TotalUnit, StringFormat='Total Units : {0}'}"
                 FontSize="12" />
-            <WMSControls:WMSLabel Text="Investment Amount: N/A"
+            <WMSControls:WMSLabel Text="{Binding InvestmentAmount, StringFormat='Investment Amount : {0}'}"
                 FontSize="12" />
+            <Grid Margin="30,20,30,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4.75*" />
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="4.75*" />
+                </Grid.ColumnDefinitions>
+                <WMSControls:WMSButton Text="Add Scheme"
+                    Style="{StaticResource WMSButtonStyle}"
+                    FontSize="{StaticResource SchemeButtonFontSize}"                    
+                    Command="{Binding AddSchemeCommand}" />
+                <WMSControls:WMSButton Text="Remove Scheme"
+                    Style="{StaticResource WMSButtonStyle}"
+                    Grid.Column="2"
+                    FontSize="{StaticResource SchemeButtonFontSize}"
+                    Command="{Binding RemoveSchemeCommand}" />
+            </Grid>
         </StackLayout>
     </Base:BaseContentView.Content>
     <Base:BaseContentView.Resources>
         <ResourceDictionary>
             <x:Double x:Key="DropDownHeightConstant">40</x:Double>
+            <OnIdiom x:Key="SchemeButtonFontSize"
+                x:TypeArguments="x:Double"
+                Phone="10"
+                Tablet="14" />            
         </ResourceDictionary>
     </Base:BaseContentView.Resources>
 </Base:BaseContentView>

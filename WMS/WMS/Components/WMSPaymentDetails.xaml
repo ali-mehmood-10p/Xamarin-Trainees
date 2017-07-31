@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    xmlns:local="clr-namespace:WMS;assembly:WMS"
+    x:Class="WMS.Components.WMSPaymentDetails">
+    <Base:BaseContentView.Content>
+        <StackLayout Spacing="20">
+            <WMSControls:WMSLabel Text="Mode of payment" />
+            <WMSComponents:WMSRadioButton x:Name="rdCheque"
+                TitleText="Cheque"
+                SelectedImageName="radio_sprite_selected"
+                UnSelectedImageName="radio_sprite_unselected"
+                GroupID="ModeOfPayment"/>
+            <WMSComponents:WMSRadioButton x:Name="rdDemandDraft"
+                TitleText="Demand Draft"
+                SelectedImageName="radio_sprite_selected"
+                UnSelectedImageName="radio_sprite_unselected"
+                GroupID="ModeOfPayment"/>
+            <WMSComponents:WMSRadioButton x:Name="rdPayOrder"
+                TitleText="Pay Order"
+                SelectedImageName="radio_sprite_selected"
+                UnSelectedImageName="radio_sprite_unselected"
+                GroupID="ModeOfPayment"/>
+            <WMSComponents:WMSRadioButton x:Name="rdOnlineTransfer"
+                TitleText="Online Account Transfer"
+                SelectedImageName="radio_sprite_selected"
+                UnSelectedImageName="radio_sprite_unselected"
+                GroupID="ModeOfPayment" /> 
+            <BoxView HeightRequest="10"/>
+            <WMSControls:WMSEntry x:Name="txtCity" Text="{Binding City}" Placeholder="Enter City" HeightRequest="50" />
+        </StackLayout>
+    </Base:BaseContentView.Content>
+</Base:BaseContentView>

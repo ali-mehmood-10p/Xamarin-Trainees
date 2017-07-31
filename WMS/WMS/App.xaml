@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WMS;assembly:WMS"    
     x:Class="WMS.App">
     <Application.Resources>
         <!-- Application resource dictionary -->
@@ -23,7 +24,11 @@
             <OnPlatform x:Key="GroupContentMargin"
                 x:TypeArguments="Thickness"
                 iOS="3,0,3,3"
-                Android="3,0,3,3" />           
+                Android="3,0,3,3" />  
+            <Style x:Key="WMSButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{x:Static local:Colors.PrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

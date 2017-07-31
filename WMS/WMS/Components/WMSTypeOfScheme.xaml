@@ -10,19 +10,16 @@
             TitleText="Mutual Funds"
             SelectedImageName="radio_sprite_selected"
             UnSelectedImageName="radio_sprite_unselected"
-            GroupID="TypeOfScheme">
-        </WMSComponents:WMSRadioButton>
+            GroupID="TypeOfScheme" />
         <WMSComponents:WMSRadioButton x:Name="rdInvestmentPlans"
             TitleText="Investment Plans"
             SelectedImageName="radio_sprite_selected"
             UnSelectedImageName="radio_sprite_unselected"
-            GroupID="TypeOfScheme">
-        </WMSComponents:WMSRadioButton>
+            GroupID="TypeOfScheme" />
         <WMSComponents:WMSRadioButton x:Name="rdMutalAndInvestments"
             TitleText="Mututal Funds and Investment Plans"
             SelectedImageName="radio_sprite_selected"
             UnSelectedImageName="radio_sprite_unselected"
-            GroupID="TypeOfScheme">
-        </WMSComponents:WMSRadioButton>
+            GroupID="TypeOfScheme" />
     </StackLayout>
 </Base:BaseContentView>

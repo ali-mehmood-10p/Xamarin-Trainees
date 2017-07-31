@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WMS;assembly:WMS"
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"    
+	x:Class="WMS.Components.WMSAccessory">
+	<Base:BaseContentView.Content>
+        <StackLayout Orientation="Horizontal">
+
+            
+            
+        </StackLayout>
+	</Base:BaseContentView.Content>
+</Base:BaseContentView>

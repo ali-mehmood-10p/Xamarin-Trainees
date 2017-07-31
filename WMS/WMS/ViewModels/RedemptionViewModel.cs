@@ -8,7 +8,7 @@ using WMS.Interfaces;
 
 namespace WMS.ViewModels
 {
-    public class RedemptionViewModel : INotifyPropertyChanged, IScheme
+    public class RedemptionViewModel : INotifyPropertyChanged, ISchemeServiceProvider, IWMSServicesProvider
     {
         string accountID = "";
         public string AccountID
@@ -66,67 +66,97 @@ namespace WMS.ViewModels
             }
         }
 
-		string cutOffTime = "";
-		public string CutOffTime
-		{
-			get
-			{
-				return cutOffTime;
-			}
-			set
-			{
-				cutOffTime = value;
-				OnPropertyChanged("CutOffTime");
-			}
-		}
+        string cutOffTime = "";
+        public string CutOffTime
+        {
+            get
+            {
+                return cutOffTime;
+            }
+            set
+            {
+                cutOffTime = value;
+                OnPropertyChanged("CutOffTime");
+            }
+        }
 
-		string totalUnit = "";
-		public string TotalUnit
-		{
-			get
-			{
-				return totalUnit;
-			}
-			set
-			{
-				totalUnit = value;
-				OnPropertyChanged("TotalUnit");
-			}
-		}
+        string totalUnit = "";
+        public string TotalUnit
+        {
+            get
+            {
+                return totalUnit;
+            }
+            set
+            {
+                totalUnit = value;
+                OnPropertyChanged("TotalUnit");
+            }
+        }
 
-		string investmentAmount = "";
-		public string InvestmentAmount
-		{
-			get
-			{
-				return investmentAmount;
-			}
-			set
-			{
-				investmentAmount = value;
-				OnPropertyChanged("InvestmentAmount");
-			}
-		}
+        string investmentAmount = "";
+        public string InvestmentAmount
+        {
+            get
+            {
+                return investmentAmount;
+            }
+            set
+            {
+                investmentAmount = value;
+                OnPropertyChanged("InvestmentAmount");
+            }
+        }
 
-		public ICommand OnAddSchemeCallback { get; set; }
-		public ICommand AddSchemeCommand => new Command((obj) =>
-											{
-                                                // Validate if needed and fire callback
-												if (OnAddSchemeCallback != null)
-												{
-													OnAddSchemeCallback.Execute(null);
-												}
-											});
-
-		public ICommand OnRemoveSchemeCallback { get; set; }
-		public ICommand RemoveScemeCommand => new Command((obj) =>
+        public ICommand OnAddSchemeCallback { get; set; }
+        public ICommand AddSchemeCommand => new Command((obj) =>
                                             {
-												// Validate if needed and fire callback
-												if (OnRemoveSchemeCallback != null)
+                                                // Validate if needed and fire callback
+                                                if (OnAddSchemeCallback != null)
+                                                {
+                                                    OnAddSchemeCallback.Execute(null);
+                                                }
+                                            });
+
+        public ICommand OnRemoveSchemeCallback { get; set; }
+        public ICommand RemoveScemeCommand => new Command((obj) =>
+                                            {
+                                                // Validate if needed and fire callback
+                                                if (OnRemoveSchemeCallback != null)
                                                 {
                                                     OnRemoveSchemeCallback.Execute(null);
                                                 }
                                             });
+
+        public ICommand PhoneCallCommandRequest { get; set; }
+        public ICommand OnCallTapped => new Command((obj) =>
+                                            {
+                                                // Validate if needed and fire callback
+                                                if (PhoneCallCommandRequest != null)
+                                                {
+                                                    PhoneCallCommandRequest.Execute(null);
+                                                }
+                                            });
+
+        public ICommand SMSCommandRequest { get; set; }
+        public ICommand OnSMSTapped => new Command((obj) =>
+                                            {
+                                                // Validate if needed and fire callback
+                                                if (SMSCommandRequest != null)
+                                                {
+                                                    SMSCommandRequest.Execute(null);
+                                                }
+                                            });
+
+        public ICommand PurchaseCommandRequest { get; set; }
+		public ICommand OnWMSTapped => new Command((obj) =>
+											{
+												// Validate if needed and fire callback
+												if (PurchaseCommandRequest != null)
+												{
+													PurchaseCommandRequest.Execute(null);
+												}
+											});
 
         public RedemptionViewModel()
         {
@@ -145,11 +175,11 @@ namespace WMS.ViewModels
 
         void PrepareSchemeDataSource()
         {
-			SourceCollection = new List<string>();
-			SourceCollection.AddRange(new string[] { "Scheme-001", "Scheme-002", "Scheme-003", "Scheme-004" });
+            SourceCollection = new List<string>();
+            SourceCollection.AddRange(new string[] { "Scheme-001", "Scheme-002", "Scheme-003", "Scheme-004" });
         }
 
-		public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
         void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)

@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace WMS.Interfaces
 {
-    public interface IScheme
+    public interface ISchemeServiceProvider
     {
 		ICommand OnAddSchemeCallback { get; set; }
 		ICommand OnRemoveSchemeCallback { get; set; }

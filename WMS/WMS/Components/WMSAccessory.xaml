@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Base:BaseContentView xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WMS;assembly:WMS"
-    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"    
-	x:Class="WMS.Components.WMSAccessory">
-	<Base:BaseContentView.Content>
-        <StackLayout Orientation="Horizontal">
-
-            
-            
-        </StackLayout>
-	</Base:BaseContentView.Content>
+    xmlns:Base="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSComponents="clr-namespace:WMS.Components;assembly=WMS"
+    xmlns:WMSControls="clr-namespace:WMS.CustomControls;assembly=WMS"
+    x:Class="WMS.Components.WMSAccessory">
+    <Base:BaseContentView.Content>
+        <WMSControls:WMSGrid VerticalOptions="StartAndExpand"
+            BackgroundColor="#013366">
+            <WMSControls:WMSGrid.RowDefinitions>
+                <RowDefinition Height="45" />
+            </WMSControls:WMSGrid.RowDefinitions>
+            <WMSControls:WMSImage Source="call_tab_unselected">
+                <WMSControls:WMSImage.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnCallTapped}" />
+                </WMSControls:WMSImage.GestureRecognizers>
+            </WMSControls:WMSImage>
+            <WMSControls:WMSImage Source="sms_tab_unselected"
+                Grid.Column="1">
+                <WMSControls:WMSImage.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnSMSTapped}" />
+                </WMSControls:WMSImage.GestureRecognizers>
+            </WMSControls:WMSImage>
+            <WMSControls:WMSImage Source="logo_tab"
+                Grid.Column="2">
+                <WMSControls:WMSImage.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnWMSTapped}" />
+                </WMSControls:WMSImage.GestureRecognizers>
+            </WMSControls:WMSImage>
+            <BoxView HorizontalOptions="End"
+                WidthRequest="1"
+                BackgroundColor="White"
+                Grid.Column="1" />
+            <BoxView HorizontalOptions="End"
+                WidthRequest="1"
+                BackgroundColor="White"
+                Grid.Column="0" />
+        </WMSControls:WMSGrid>
+    </Base:BaseContentView.Content>
 </Base:BaseContentView>

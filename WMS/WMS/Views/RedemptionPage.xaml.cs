@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using WMS.Components;
 using WMS.Utils;
 using WMS.ViewModels;
+using WMS.Interfaces;
 
 namespace WMS.Views
 {
@@ -27,50 +28,70 @@ namespace WMS.Views
 
         void ConfigurePage()
         {
-			Title = "REQUEST FOR REDEMPTION";
+            Title = "REQUEST FOR REDEMPTION";
 
             viewModel = new RedemptionViewModel()
             {
                 OnAddSchemeCallback = new Command(AddSchemeCommandHandler),
-			    OnRemoveSchemeCallback = new Command(RemoveSchemeCommandHandler) 
+                OnRemoveSchemeCallback = new Command(RemoveSchemeCommandHandler),
+
+                PhoneCallCommandRequest = new Command(MakeCallHandler),
+                SMSCommandRequest = new Command(SendSMSHandler),
+                PurchaseCommandRequest = new Command(MakePurchaseHandler)
             };
 
-			BindingContext = viewModel;
+            BindingContext = viewModel;
         }
 
         void ConfigureBindings()
         {
-			vwHeader.BindingContext = viewModel;
-			vwTypeOfScheme.BindingContext = viewModel;
-			vwRedemptionDetails.BindingContext = viewModel;
-			vwPaymentDetails.BindingContext = viewModel;
+            vwHeader.BindingContext = viewModel;
+            vwTypeOfScheme.BindingContext = viewModel;
+            vwRedemptionDetails.BindingContext = viewModel;
+            vwPaymentDetails.BindingContext = viewModel;
+            vwAccessory.BindingContext = viewModel;
         }
 
         void ConfigureDefaultServices()
         {
-			vwTypeOfScheme.SetDefaultTypeOfService();
-			vwRedemptionDetails.SetDefaultRedemptionDetails();
-			vwPaymentDetails.SetDefaultTypeOfService();
+            vwTypeOfScheme.SetDefaultTypeOfService();
+            vwRedemptionDetails.SetDefaultRedemptionDetails();
+            vwPaymentDetails.SetDefaultTypeOfService();
         }
 
         void AddSchemeCommandHandler()
         {
-            
+
         }
 
-		void RemoveSchemeCommandHandler()
-		{
+        void RemoveSchemeCommandHandler()
+        {
 
-		}
+        }
+
+        void MakeCallHandler()
+        {
+			DependencyService.Get<IWMSServices>().InvokeCallService();
+        }
+
+        void SendSMSHandler()
+        {
+            DependencyService.Get<IWMSServices>().InvokeSMSService();
+        }
+
+        void MakePurchaseHandler()
+        {
+            DependencyService.Get<IWMSServices>().InvokePaymentService();
+        }
 
         void btnProceed_Clicked(object sender, System.EventArgs e)
         {
-            
+
         }
 
         void btnCancel_Clicked(object sender, System.EventArgs e)
-		{
-	 
-		}
+        {
+
+        }
     }
 }

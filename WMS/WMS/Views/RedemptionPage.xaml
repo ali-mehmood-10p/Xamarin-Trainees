@@ -47,6 +47,7 @@
                     </Grid>
                 </StackLayout>
             </ScrollView>
+            <WMSComponents:WMSAccessory x:Name="vwAccessory" />
         </StackLayout>
     </Base:BaseContentPage.Content>
     <Base:BaseContentPage.Resources>

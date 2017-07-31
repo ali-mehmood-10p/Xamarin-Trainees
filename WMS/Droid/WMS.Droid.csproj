@@ -120,6 +120,7 @@
     <Compile Include="Renderer\TransparentEntryRenderer.cs" />
     <Compile Include="Renderer\CustomFrameRenderer.cs" />
     <Compile Include="Renderer\TransparentButtonRenderer.cs" />
+    <Compile Include="DependencyServices\WMSServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -163,6 +164,18 @@
     <AndroidResource Include="Resources\drawable-hdpi\clock.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\clock.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\clock.png" />
+    <AndroidResource Include="Resources\drawable\call_tab_unselected.png" />
+    <AndroidResource Include="Resources\drawable\sms_tab_unselected.png" />
+    <AndroidResource Include="Resources\drawable\logo_tab.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\call_tab_unselected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\sms_tab_unselected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo_tab.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\call_tab_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\sms_tab_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logo_tab.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\call_tab_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\sms_tab_unselected.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo_tab.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />

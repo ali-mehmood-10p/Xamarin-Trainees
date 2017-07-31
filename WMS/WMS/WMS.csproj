@@ -124,10 +124,12 @@
     <Compile Include="Components\WMSPaymentDetails.xaml.cs">
       <DependentUpon>WMSPaymentDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IScheme.cs" />
+    <Compile Include="Interfaces\ISchemeServiceProvider.cs" />
     <Compile Include="Components\WMSAccessory.xaml.cs">
       <DependentUpon>WMSAccessory.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IWMSServices.cs" />
+    <Compile Include="Interfaces\IWMSServicesProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

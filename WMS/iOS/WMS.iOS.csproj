@@ -109,6 +109,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Renderer\" />
+    <Folder Include="DependencyServices\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -122,6 +123,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderer\TransparentEntryRenderer.cs" />
+    <Compile Include="DependencyServices\WMSServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\user_pic.png" />

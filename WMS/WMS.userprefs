@@ -1,12 +1,21 @@
 ﻿<Properties StartupConfiguration="{60CB1541-C564-48EC-8C6D-13302911BD89}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WMS/Components/WMSAccessory.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
     <Files>
-      <File FileName="WMS/Components/WMSAccessory.xaml" Line="8" Column="9" />
+      <File FileName="iOS/DependencyServices/WMSServices.cs" Line="18" Column="5" />
+      <File FileName="WMS/Components/WMSAccessory.xaml" Line="26" Column="52" />
+      <File FileName="WMS/Views/RedemptionPage.xaml.cs" Line="74" Column="1" />
+      <File FileName="WMS/Views/RedemptionPage.xaml" Line="50" Column="60" />
+      <File FileName="WMS/ViewModels/RedemptionViewModel.cs" Line="137" Column="1" />
+      <File FileName="Droid/DependencyServices/WMSServices.cs" Line="16" Column="26" />
+      <File FileName="Droid/MainActivity.cs" Line="29" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/shahan/Documents/Projects/Xamarin/Projects/TrainingTask02/Xamarin-Trainees/WMS/WMS/Views/RedemptionPage.xaml.cs" relfile="WMS/Views/RedemptionPage.xaml.cs" line="88" column="1" />
+      <Breakpoint file="/Users/shahan/Documents/Projects/Xamarin/Projects/TrainingTask02/Xamarin-Trainees/WMS/WMS/Views/RedemptionPage.xaml.cs" relfile="WMS/Views/RedemptionPage.xaml.cs" line="93" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.WMS.Droid PreferredExecutionTarget="Android.192.168.56.101:5555" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

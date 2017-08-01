@@ -12,7 +12,7 @@ namespace WMS.iOS.DependencyServices
     {
         public void InvokeCallService()
         {
-            string url = "tel:\\03001234567";
+            string url = "tel://03001234567";
             NSUrl phoneUrl = new NSUrl(url);
 			if (!UIApplication.SharedApplication.OpenUrl(phoneUrl))
 			{
